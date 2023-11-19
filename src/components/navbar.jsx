@@ -5,7 +5,7 @@ const navbar = () =>{
     return(
         <div className="navbar">
             <div className="title">
-                TITLE
+                E-RATION
             </div>
             <div className="login">
                 LOGOUT
