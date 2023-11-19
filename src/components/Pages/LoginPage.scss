@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-.loginpage{
+
+.loginpage {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,49 +10,60 @@
     align-items: center;
     background-image: url("../../assets/grainbg.png");
     background-size: cover;
-    .loginbox{
+
+    .loginbox {
         width: 50%;
         height: 60%;
         display: flex;
         border-radius: 10px;
-        .loginboxleft{
+
+        .loginboxleft {
             width: 50%;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             background-color: rgba(97, 196, 61, 1);
-            font-size: 2.5rem;
+            font-size: 3rem;
             display: flex;
             align-items: flex-end;
-            letter-spacing: -1.5px;
-            
+            //letter-spacing: -1.5px;
+
             line-height: 1.5;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Koulen', sans-serif;
             color: white;
-            
-            span{
+
+            span {
                 padding-left: 5vw;
-                padding-bottom: 5vh;
+                padding-bottom: 12vh;
             }
         }
-        .loginboxright{
+
+        .loginboxright {
             width: 50%;
             background-color: white;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            .loginboxrightform{
+
+            .loginboxrightform {
                 display: flex;
                 flex-direction: column;
-                padding-left: 3vw;
+                padding-left: 4.5vw;
                 width: 60%;
-                font-family: 'Roboto', sans-serif;
-                .username{
+                font-family: 'Open Sans', sans-serif;
+
+                .username {
                     padding-top: 15vh;
-                    
+                    font-size: 0.9rem;
+                    font-weight: 500;
+
                 }
-                .password{
+
+                .password {
                     padding-top: 2.5vh;
+                    font-size: 0.9rem;
+                    font-weight: 500;
                 }
-                input{
+
+                input {
                     border: none;
                     background-color: #ededed;
                     border-radius: 5px;
@@ -60,39 +72,71 @@
                     margin-top: 1.5vh;
                     outline: none;
                 }
-                input::placeholder{
+
+                input::placeholder {
                     color: #697077;
-                    
+
                 }
-                .forgot{
+
+                .forgot {
                     font-size: 0.8rem;
                     margin-top: 1vh;
                     color: #697077;
+                    transition: color 0.3s;
+                    /* Add a smooth transition effect */
+
+                    &:hover {
+                        color: rgb(20, 185, 75);
+                        cursor: pointer;
+                        /* Change color on hover */
+                    }
                 }
-                
+
             }
-            .loginboxrightbutton{
+
+            .loginboxrightbutton {
                 padding-top: 2vh;
-                padding-right: 4vw;
+                padding-right: 1vw;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                button{
+                
+                
+
+                button {
                     margin-top: 2vh;
                     border: none;
                     border-radius: 10px;
-                    background-color: #61C43D;
+                    background-color: #61c43d;
                     width: 30%;
                     text-align: center;
                     height: 5vh;
                     color: white;
                     font-family: 'Roboto', sans-serif;
                     font-weight: 500;
+                    transition: background-color 0.3s;
+                    /* Add a smooth transition effect */
+
+                    &:hover {
+                        background-color: #50a432;
+                        cursor: pointer;
+                        /* Change color on hover */
+                    }
+                    
                 }
-                span{
+
+                span {
                     padding-top: 1vh;
-                    text-decoration: underline;
+                    //text-decoration: underline;
                     font-size: 0.9rem;
+                    transition: color 0.3s;
+                    /* Add a smooth transition effect */
+
+                    &:hover {
+                        color: rgb(20, 185, 75);
+                        cursor: pointer;
+                        /* Change color on hover */
+                    }
                 }
             }
         }
