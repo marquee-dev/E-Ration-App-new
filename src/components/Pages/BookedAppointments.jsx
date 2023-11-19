@@ -1,8 +1,13 @@
 import React from "react";
 import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
+import { useNavigate } from "react-router-dom";
 
 const BookedAppointments = () => {
+    const navigate=useNavigate();
+    const handleProfile =() => {
+        navigate("/profile");
+    }
   return (
     <div className="page-ba">
       <NavBar/>
@@ -15,7 +20,7 @@ const BookedAppointments = () => {
           <button className="bt-ba">BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-ba">
-          <button className="bt-ba">View Full Profile</button>
+          <button className="bt-ba" onClick={()=>{handleProfile()}}>View Full Profile</button>
           <button className="btselect-ba">Booked Appointments</button>
           <button className="bt-ba">Available Items</button>
           <button className="bt-ba">Transactions</button>
