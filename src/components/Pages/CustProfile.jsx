@@ -10,7 +10,7 @@ const CustProfile = () => {
   }
   const handleItems = () =>{
     navigate("/items")
-}
+} 
   return (
     <div className="page">
       <NavBar/>
