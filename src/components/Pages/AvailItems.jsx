@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const AvailItems = () => {
   const navigate = useNavigate();
+  const handleProfile =() => {
+    navigate("/profile");
+}
+const handleBooking = () =>{
+  navigate("/booking");
+}
   return (
     <div className="page-a">
       <NavBar/>
@@ -17,8 +23,8 @@ const AvailItems = () => {
           <button className="bt-a">BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-a">
-          <button className="bt-a">View Full Profile</button>
-          <button className="bt-a">Booked Appointments</button>
+          <button className="bt-a"onClick={()=>{handleProfile()}}>View Full Profile</button>
+          <button className="bt-a" onClick={()=>{handleBooking()}}>Booked Appointments</button>
           <button className="btselect-a">Available Items</button>
           <button className="bt-a">Transactions</button>
         </div>
