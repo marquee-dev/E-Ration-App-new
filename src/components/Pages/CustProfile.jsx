@@ -8,6 +8,9 @@ const CustProfile = () => {
   const handleBooking = () =>{
     navigate("/booking");
   }
+  const handleItems = () =>{
+    navigate("/items")
+}
   return (
     <div className="page">
       <NavBar/>
@@ -22,7 +25,7 @@ const CustProfile = () => {
         <div className="list">
           <button className="btselect">View Full Profile</button>
           <button className="bt" onClick={()=>{handleBooking()}}>Booked Appointments</button>
-          <button className="bt">Available Items</button>
+          <button className="bt" onClick={()=>{handleItems()}}>Available Items</button>
           <button className="bt">Transactions</button>
         </div>
       </div>

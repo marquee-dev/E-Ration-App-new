@@ -8,6 +8,9 @@ const BookedAppointments = () => {
     const handleProfile =() => {
         navigate("/profile");
     }
+    const handleItems = () =>{
+        navigate("/items")
+    }
   return (
     <div className="page-ba">
       <NavBar/>
@@ -22,7 +25,7 @@ const BookedAppointments = () => {
         <div className="list-ba">
           <button className="bt-ba" onClick={()=>{handleProfile()}}>View Full Profile</button>
           <button className="btselect-ba">Booked Appointments</button>
-          <button className="bt-ba">Available Items</button>
+          <button className="bt-ba" onClick={()=>{handleItems()}}>Available Items</button>
           <button className="bt-ba">Transactions</button>
         </div>
       </div>
