@@ -1,5 +1,5 @@
 import React from "react";
-import "./CustProfile.scss";
+import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
 
 const custprofile = () => {
@@ -23,8 +23,8 @@ const custprofile = () => {
       </div>
       <div className="profiledisplay-ba">
         <div className="section-ba">
-          <div className="title-ba">PROFILE</div>
-          <div className="details-ba">
+          <div className="title-ba">BOOKED APPOINTMENTS</div>
+          {/* <div className="details-ba">
             <div className="custn-ba">
               CARD NUMBER
               <div className="custnbox-ba">
@@ -51,7 +51,7 @@ const custprofile = () => {
               ADDRESS
               <div className="custnbox-ba"></div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="relation-ba">
           <div className="rel1-ba">
