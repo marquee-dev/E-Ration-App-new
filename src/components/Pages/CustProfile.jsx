@@ -11,6 +11,10 @@ const CustProfile = () => {
   const handleItems = () =>{
     navigate("/items")
 } 
+
+const handleTransactions = () =>{
+  navigate("/transaction");
+}
   return (
     <div className="page">
       <NavBar/>
@@ -26,7 +30,7 @@ const CustProfile = () => {
           <button className="btselect">View Full Profile</button>
           <button className="bt" onClick={()=>{handleBooking()}}>Booked Appointments</button>
           <button className="bt" onClick={()=>{handleItems()}}>Available Items</button>
-          <button className="bt">Transactions</button>
+          <button className="bt"onClick={()=>{handleTransactions()}}>Transactions</button>
         </div>
       </div>
       <div className="profiledisplay">

@@ -7,6 +7,7 @@ import CustProfile from './components/Pages/CustProfile';
 import SplashScreen from './components/splashscreen';
 import AvailItems from './components/Pages/AvailItems';
 import BookedAppointments from "./components/Pages/BookedAppointments"
+import Transaction from "./components/Pages/Transaction"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
       <Route element={<CreateAcct_2/>} path='/verify' />
       <Route element={<CustProfile/>} path='/profile' />
       <Route element={<AvailItems/>} path='/items' /> 
-      <Route element={<BookedAppointments/>} path='/booking' /> 
+      <Route element={<BookedAppointments/>} path='/booking' />
+      <Route element={<Transaction/>} path='/transaction' />
      </Routes>
      </BrowserRouter>
     </div>
