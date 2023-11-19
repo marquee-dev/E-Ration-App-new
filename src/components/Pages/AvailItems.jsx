@@ -1,8 +1,10 @@
 import React from "react";
 import "./AvailItems.scss";
 import NavBar from '../navbar.jsx';
+import { useNavigate } from "react-router-dom";
 
 const AvailItems = () => {
+  const navigate = useNavigate();
   return (
     <div className="page-a">
       <NavBar/>
@@ -15,9 +17,9 @@ const AvailItems = () => {
           <button className="bt-a">BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-a">
-          <button className="btselect-a">View Full Profile</button>
+          <button className="bt-a">View Full Profile</button>
           <button className="bt-a">Booked Appointments</button>
-          <button className="bt-a">Available Items</button>
+          <button className="btselect-a">Available Items</button>
           <button className="bt-a">Transactions</button>
         </div>
       </div>
