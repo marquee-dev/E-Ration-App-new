@@ -15,8 +15,8 @@ const custprofile = () => {
           <button className="bt-ba">BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-ba">
-          <button className="btselect-ba">View Full Profile</button>
-          <button className="bt-ba">Booked Appointments</button>
+          <button className="bt-ba">View Full Profile</button>
+          <button className="btselect-ba">Booked Appointments</button>
           <button className="bt-ba">Available Items</button>
           <button className="bt-ba">Transactions</button>
         </div>
@@ -24,6 +24,15 @@ const custprofile = () => {
       <div className="profiledisplay-ba">
         <div className="section-ba">
           <div className="title-ba">BOOKED APPOINTMENTS</div>
+          <div className="relation-ba">
+          <div className="rel1-ba">
+            <div className="name-ba">NAME</div>
+            <div className="rel-ba">RELATION</div>
+          </div>
+          <div className="rel2-ba">
+            <div className="line-ba"></div>
+          </div>
+        </div>
           {/* <div className="details-ba">
             <div className="custn-ba">
               CARD NUMBER
@@ -53,15 +62,7 @@ const custprofile = () => {
             </div>
           </div> */}
         </div>
-        <div className="relation-ba">
-          <div className="rel1-ba">
-            <div className="name-ba">NAME</div>
-            <div className="rel-ba">RELATION</div>
-          </div>
-          <div className="rel2-ba">
-            <div className="line-ba"></div>
-          </div>
-        </div>
+        
       </div>
     </div>
     </div>

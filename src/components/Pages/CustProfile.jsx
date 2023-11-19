@@ -1,8 +1,13 @@
 import React from "react";
 import "./CustProfile.scss";
 import NavBar from "../navbar.jsx"
+import { useNavigate } from "react-router-dom";
 
-const custprofile = () => {
+const CustProfile = () => {
+  const navigate = useNavigate();
+  const handleBooking = () =>{
+    navigate("/booking");
+  }
   return (
     <div className="page">
       <NavBar/>
@@ -16,7 +21,7 @@ const custprofile = () => {
         </div>
         <div className="list">
           <button className="btselect">View Full Profile</button>
-          <button className="bt">Booked Appointments</button>
+          <button className="bt" onClick={()=>{handleBooking()}}>Booked Appointments</button>
           <button className="bt">Available Items</button>
           <button className="bt">Transactions</button>
         </div>
@@ -67,4 +72,4 @@ const custprofile = () => {
     </div>
   );
 };
-export default custprofile;
+export default CustProfile;

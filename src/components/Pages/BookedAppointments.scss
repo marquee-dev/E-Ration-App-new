@@ -120,7 +120,7 @@
             .section-ba {
                 .details-ba {
                     font-family: Open Sans;
-                        
+                    display: none;
                 }
 
                 .custn-ba {
@@ -146,8 +146,7 @@
             }
 
             .relation-ba {
-                margin-top: 50px;
-                margin-left: 50px;
+                
                 display: flex;
                 flex-direction: column;
                 width: 470px;
