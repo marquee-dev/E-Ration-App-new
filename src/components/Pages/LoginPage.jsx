@@ -1,8 +1,13 @@
 import React from "react";
 import "./LoginPage.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage()
 {
+    const navigate = useNavigate();
+    const handleCreate = () =>{
+            navigate("/create")
+    }
     return(
         <div className="loginpage">
            <div className="loginbox">
@@ -20,7 +25,7 @@ export default function LoginPage()
                 </div>
                 <div className="loginboxrightbutton">
                 <button>Sign in</button>
-                    <span>Create new account</span>
+                    <span onClick={()=>{handleCreate()}}>Create new account</span>
                 </div>
             </div>
            </div>

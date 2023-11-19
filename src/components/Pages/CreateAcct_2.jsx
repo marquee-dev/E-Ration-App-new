@@ -3,6 +3,9 @@ import "./CreateAcct_2.scss";
 
 export default function CreateAcct_2()
 {
+    const handleProfile = () =>{
+        window.location.href="/profile"
+    }
     return(
         <div className="create-2account">
            <div className="create-2box">
@@ -35,7 +38,7 @@ export default function CreateAcct_2()
                 </div>
                 </div>
                 <div className="create-2boxrightbutton">
-                <button>Verify</button>  
+                <button onClick={()=>{handleProfile()}}>Verify</button>  
                 </div>
             </div>
            </div>
