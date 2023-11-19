@@ -28,7 +28,7 @@ const AvailItems = () => {
         </div>
         <div className="details-a">
         <div className="sort-a">
-            <button className="srt-a">SORT</button>
+            <button className="srt-a">SORT: <span>A-Z</span></button>
         </div>
         <div className="relation-a">
           <div className="rel1-a">

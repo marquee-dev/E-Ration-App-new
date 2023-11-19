@@ -14,7 +14,7 @@
             border-radius: 25px;
             background: #2D2A32;
             margin-left: 137px;
-            
+
 
             .name-a {
                 margin-left: 75px;
@@ -120,6 +120,7 @@
             .details-a {
                 display: flex;
                 flex-direction: column;
+
                 .relation-a {
                     margin-top: 50px;
                     margin-left: 50px;
@@ -130,10 +131,10 @@
                     flex-shrink: 0;
                     border-radius: 10px;
                     background: rgb(252, 255, 247);
-    
+
                     .rel1-a {
                         display: flex;
-    
+
                         .name-a {
                             padding-top: 15px;
                             padding-left: 20px;
@@ -146,7 +147,7 @@
                             font-weight: 400;
                             line-height: normal;
                         }
-    
+
                         .rel-a {
                             padding-top: 15px;
                             color: #106A39;
@@ -157,25 +158,62 @@
                             line-height: normal;
                         }
                     }
-    
+
                     .rel2-a {
                         padding-left: 13px;
-    
+
                         .line-a {
-    
+
                             width: 445px;
                             height: 1px;
                             background: #106A39;
                         }
                     }
                 }
-            
+
             }
-            .sort-a{
+
+            .sort-a {
                 display: flex;
                 justify-content: end;
+
+                .srt-a {
+                    background-color: white;
+                    width: 144px;
+                    height: 43px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    border: 1px solid #F4DF6C;
+                    transition: background 0.3s;
+                    /* Add a smooth transition effect */
+
+                    &:hover {
+                        background: #F4DF6C;
+                        span{
+                            color: #FFF;
+                        }
+                        /* Change color on hover */
+                    }
+
+                    color: #6E6B6B;
+                    font-family: Open Sans;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+
+                    span {
+                        color: #FEBB25;
+                        font-family: Open Sans;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        
+                    }
+                }
             }
-            
+
         }
 
     }
