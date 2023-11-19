@@ -2,7 +2,7 @@ import React from "react";
 import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
 
-const custprofile = () => {
+const BookedAppointments = () => {
   return (
     <div className="page-ba">
       <NavBar/>
@@ -68,4 +68,4 @@ const custprofile = () => {
     </div>
   );
 };
-export default custprofile;
+export default BookedAppointments;
