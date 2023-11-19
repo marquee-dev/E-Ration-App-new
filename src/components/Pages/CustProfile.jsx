@@ -1,6 +1,6 @@
 import React from "react";
 import "./CustProfile.scss";
-import NavBar from 'D:/E-Ration/frontend/src/components/navbar.jsx';
+import NavBar from "../navbar.jsx"
 
 const custprofile = () => {
   return (
