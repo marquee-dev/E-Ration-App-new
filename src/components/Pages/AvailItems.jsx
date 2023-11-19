@@ -2,43 +2,43 @@ import React from "react";
 import "./AvailItems.scss";
 import NavBar from '../navbar.jsx';
 
-const custprofile = () => {
+const AvailItems = () => {
   return (
-    <div className="page">
+    <div className="page-a">
       <NavBar/>
     
     
-    <div className="profile">
-      <div className="sidemenu">
-        <div className="name">HI CUSTOMER</div>
-        <div className="btn">
-          <button className="bt">BOOK AN APPOINTMENT</button>
+    <div className="profile-a">
+      <div className="sidemenu-a">
+        <div className="name-a">HI CUSTOMER</div>
+        <div className="btn-a">
+          <button className="bt-a">BOOK AN APPOINTMENT</button>
         </div>
-        <div className="list">
-          <button className="btselect">View Full Profile</button>
-          <button className="bt">Booked Appointments</button>
-          <button className="bt">Available Items</button>
-          <button className="bt">Transactions</button>
+        <div className="list-a">
+          <button className="btselect-a">View Full Profile</button>
+          <button className="bt-a">Booked Appointments</button>
+          <button className="bt-a">Available Items</button>
+          <button className="bt-a">Transactions</button>
         </div>
       </div>
-      <div className="profiledisplay">
-        <div className="section">
-          <div className="title">ITEMS AVAILABLE FOR THE MONTH</div>
+      <div className="profiledisplay-a">
+        <div className="section-a">
+          <div className="title-a">ITEMS AVAILABLE FOR THE MONTH</div>
          
         </div>
-        <div className="details">
-        <div className="sort">
-            <button className="srt">SORT</button>
+        <div className="details-a">
+        <div className="sort-a">
+            <button className="srt-a">SORT</button>
         </div>
-        <div className="relation">
-          <div className="rel1">
-            <div className="name">NAME</div>
-            <div className="rel">RELATION</div>
+        <div className="relation-a">
+          <div className="rel1-a">
+            <div className="name-a">NAME</div>
+            <div className="rel-a">RELATION</div>
           </div>
         </div>
        
-          <div className="rel2">
-            <div className="line"></div>
+          <div className="rel2-a">
+            <div className="line-a"></div>
           </div>
         </div>
       </div>
@@ -46,4 +46,4 @@ const custprofile = () => {
     </div>
   );
 };
-export default custprofile;
+export default AvailItems;
