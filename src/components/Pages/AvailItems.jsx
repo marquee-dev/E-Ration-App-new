@@ -40,14 +40,16 @@ const handleBooking = () =>{
         </div>
         <div className="relation-a">
           <div className="rel1-a">
-            <div className="name-a">NAME</div>
-            <div className="rel-a">RELATION</div>
+            <div className="name-a">ITEM NAME</div>
+            <div className="quant-a">QUANTITY</div>
+            <div className="price-a">PRICE/KG</div>
           </div>
-        </div>
-       
           <div className="rel2-a">
             <div className="line-a"></div>
           </div>
+        </div>
+       
+          
         </div>
       </div>
     </div>
