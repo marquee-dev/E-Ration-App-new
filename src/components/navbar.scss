@@ -1,0 +1,44 @@
+.navbar {
+    z-index: 0;
+    width: 88%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+    //background-color: aliceblue;
+    .title {
+        color: #000;
+        font-family: Koulen;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s;
+        /* Add a smooth transition effect */
+
+        &:hover {
+            color: rgb(20, 185, 75);
+            /* Change color on hover */
+        }
+    }
+
+    .login {
+        color: #000;
+        font-family: Koulen;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.3s;
+        /* Add a smooth transition effect */
+
+        &:hover {
+            color: rgb(20, 185, 75);
+            /* Change color on hover */
+        }
+    }
+}

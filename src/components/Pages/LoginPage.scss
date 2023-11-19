@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+.loginpage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/grainbg.png");
+    background-size: cover;
+    .loginbox{
+        width: 50%;
+        height: 60%;
+        display: flex;
+        border-radius: 10px;
+        .loginboxleft{
+            width: 50%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: rgba(97, 196, 61, 1);
+            font-size: 2.5rem;
+            display: flex;
+            align-items: flex-end;
+            letter-spacing: -1.5px;
+            
+            line-height: 1.5;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            
+            span{
+                padding-left: 5vw;
+                padding-bottom: 5vh;
+            }
+        }
+        .loginboxright{
+            width: 50%;
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            .loginboxrightform{
+                display: flex;
+                flex-direction: column;
+                padding-left: 3vw;
+                width: 60%;
+                font-family: 'Roboto', sans-serif;
+                .username{
+                    padding-top: 15vh;
+                    
+                }
+                .password{
+                    padding-top: 2.5vh;
+                }
+                input{
+                    border: none;
+                    background-color: #ededed;
+                    border-radius: 5px;
+                    height: 4vh;
+                    text-indent: 5px;
+                    margin-top: 1.5vh;
+                    outline: none;
+                }
+                input::placeholder{
+                    color: #697077;
+                    
+                }
+                .forgot{
+                    font-size: 0.8rem;
+                    margin-top: 1vh;
+                    color: #697077;
+                }
+                
+            }
+            .loginboxrightbutton{
+                padding-top: 2vh;
+                padding-right: 4vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                button{
+                    margin-top: 2vh;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #61C43D;
+                    width: 30%;
+                    text-align: center;
+                    height: 5vh;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                }
+                span{
+                    padding-top: 1vh;
+                    text-decoration: underline;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
