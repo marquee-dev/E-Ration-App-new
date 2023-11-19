@@ -109,7 +109,7 @@
         .profiledisplay {
             padding-left: 50px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
             .title {
                 text-align: start;
@@ -117,83 +117,64 @@
                 font-size: 25px
             }
 
-            .section {
-                .details {
-                    font-family: Open Sans;
-
-                }
-
-                .custn {
-                    padding-top: 10px;
-                    text-align: start;
-                    color: #000;
-                    font-stretch: 50%;
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 12px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-
-                    .custnbox {
-                        margin-top: 5px;
-                        width: 311px;
-                        height: 36px;
-                        flex-shrink: 0;
-                        border-radius: 10px;
-                        background: #D5F8A4;
-                    }
-                }
-            }
-
-            .relation {
-                margin-top: 50px;
-                margin-left: 50px;
+            .details {
                 display: flex;
                 flex-direction: column;
-                width: 470px;
-                height: 464px;
-                flex-shrink: 0;
-                border-radius: 10px;
-                background: rgb(252, 255, 247);
-
-                .rel1 {
+                .relation {
+                    margin-top: 50px;
+                    margin-left: 50px;
                     display: flex;
-
-                    .name {
-                        padding-top: 15px;
-                        padding-left: 20px;
-                        padding-right: 65%;
-                        padding-bottom: 5px;
-                        color: #106A39;
-                        font-family: Open Sans;
-                        font-size: 15px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
+                    flex-direction: column;
+                    width: 670px;
+                    height: 364px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    background: rgb(252, 255, 247);
+    
+                    .rel1 {
+                        display: flex;
+    
+                        .name {
+                            padding-top: 15px;
+                            padding-left: 20px;
+                            padding-right: 65%;
+                            padding-bottom: 5px;
+                            color: #106A39;
+                            font-family: Open Sans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+    
+                        .rel {
+                            padding-top: 15px;
+                            color: #106A39;
+                            font-family: Open Sans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
                     }
-
-                    .rel {
-                        padding-top: 15px;
-                        color: #106A39;
-                        font-family: Open Sans;
-                        font-size: 15px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
+    
+                    .rel2 {
+                        padding-left: 13px;
+    
+                        .line {
+    
+                            width: 445px;
+                            height: 1px;
+                            background: #106A39;
+                        }
                     }
                 }
-
-                .rel2 {
-                    padding-left: 13px;
-
-                    .line {
-
-                        width: 445px;
-                        height: 1px;
-                        background: #106A39;
-                    }
-                }
+            
             }
+            .sort{
+
+            }
+            
         }
 
     }

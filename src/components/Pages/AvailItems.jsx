@@ -24,40 +24,19 @@ const custprofile = () => {
       <div className="profiledisplay">
         <div className="section">
           <div className="title">ITEMS AVAILABLE FOR THE MONTH</div>
-          <div className="details">
-            <div className="custn">
-              CARD NUMBER
-              <div className="custnbox">
-                
-              </div>
-            </div>
-            <div className="custn">
-              CUSTOMER NAME
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              CARD TYPE
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              PHONE NO
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              TALUK
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              ADDRESS
-              <div className="custnbox"></div>
-            </div>
-          </div>
+         
+        </div>
+        <div className="details">
+        <div className="sort">
+            <button className="srt">SORT</button>
         </div>
         <div className="relation">
           <div className="rel1">
             <div className="name">NAME</div>
             <div className="rel">RELATION</div>
           </div>
+        </div>
+       
           <div className="rel2">
             <div className="line"></div>
           </div>
