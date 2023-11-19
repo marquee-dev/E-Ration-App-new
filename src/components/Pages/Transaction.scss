@@ -183,11 +183,15 @@
                     
                 }
                 .detailssub{
-                    padding-top: 20px;
+                    background-color: rgb(252, 255, 247);
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    padding-top: 10px;
                     padding-left: 30px;
                     display: flex;
                     height: 55vh;
                     .iddate{
+                        
                         border-right: 1px solid rgb(187, 187, 187);
                         .id{
                             padding-right: 117px;

@@ -19,18 +19,18 @@
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             background-color: rgba(97, 196, 61, 1);
-            font-size: 2.5rem;
+            font-size: 3rem;
             display: flex;
             align-items: flex-end;
-            letter-spacing: -1.5px;
+            //letter-spacing: -1.5px;
             
             line-height: 1.5;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Koulen', sans-serif;
             color: white;
             
             span{
-                padding-left: 3vw;
-                padding-bottom: 5vh;
+                padding-left: 5vw;
+                padding-bottom: 12vh;
             }
         }
         .create-2boxright{
