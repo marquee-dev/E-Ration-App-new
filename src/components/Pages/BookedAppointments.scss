@@ -14,7 +14,7 @@
             border-radius: 25px;
             background: #2D2A32;
             margin-left: 137px;
-            
+
 
             .name-ba {
                 margin-left: 75px;
@@ -146,10 +146,10 @@
             }
 
             .relation-ba {
-                
+
                 display: flex;
                 flex-direction: column;
-                width: 470px;
+                width: 870px;
                 height: 464px;
                 flex-shrink: 0;
                 border-radius: 10px;
@@ -157,18 +157,70 @@
 
                 .rel1-ba {
                     display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    .upcom {
+                        padding-bottom: 170px;
+                        
+                        .line{
+                            width: 850px;
+                        height: 0.5px;
+                        background: #106A39;
+                        }
+                        .up {
+                            
+                            .upcoming {
+                                font-family: Open Sans;
+                                font-size: 15px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                color: #106A39;
+                                
+                            }
+                            padding-bottom: 5px;
+                        }
 
-                    .name-ba {
-                        padding-top: 15px;
-                        padding-left: 20px;
-                        padding-right: 65%;
-                        padding-bottom: 5px;
-                        color: #106A39;
-                        font-family: Open Sans;
-                        font-size: 15px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
+                        .updetails {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-left: 10px;
+                            font-family: Open Sans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            padding-bottom: 5px;
+                            color: #106A39;
+                        }
+                    }
+
+                    .comp {
+                        .com {
+                            padding-bottom: 5px;
+                            .completed {
+                                font-family: Open Sans;
+                                font-size: 15px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            color: #106A39;
+                            }
+                        }
+
+                        .compdetails {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-left: 10px;
+                            font-family: Open Sans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            
+                        }
+
                     }
 
                     .rel-ba {
@@ -184,11 +236,11 @@
 
                 .rel2-ba {
                     padding-left: 13px;
-
+                    padding-top: 5px;
                     .line-ba {
-
-                        width: 445px;
-                        height: 1px;
+                        
+                        width: 850px;
+                        height: 0.5px;
                         background: #106A39;
                     }
                 }
