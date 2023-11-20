@@ -1,10 +1,12 @@
 import React from "react";
 import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
+import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
 
 const BookedAppointments = () => {
     const navigate=useNavigate();
+    const Swal = require('sweetalert2')
     const handleProfile =() => {
         navigate("/profile");
     }
@@ -13,6 +15,21 @@ const BookedAppointments = () => {
     }
     const handleTransactions = () =>{
       navigate("/transaction");
+    }
+    const handleSample =async (e) =>{
+      const { value: date } = await Swal.fire({
+        title: "SELECT YOUR DATE",
+        input: "date",
+        didOpen: () => {
+          const today = (new Date()).toISOString();
+          Swal.getInput().min = today.split("T")[0];
+          
+        }
+      });
+      if (date) {
+        Swal.fire("BOOKING CONFIRMED", date);
+        
+      }
     }
   return (
     <div className="page-ba">
@@ -23,7 +40,7 @@ const BookedAppointments = () => {
       <div className="sidemenu-ba">
         <div className="name-ba">HI CUSTOMER</div>
         <div className="btn-ba">
-          <button className="bt-ba">BOOK AN APPOINTMENT</button>
+          <button className="bt-ba" onClick={(e)=>{handleSample()}}>BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-ba">
           <button className="bt-ba" onClick={()=>{handleProfile()}}>View Full Profile</button>
