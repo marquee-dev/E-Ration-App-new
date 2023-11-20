@@ -1,7 +1,7 @@
 import React from "react";
 import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
 
 const BookedAppointments = () => {
@@ -33,52 +33,13 @@ const BookedAppointments = () => {
     }
   return (
     <div className="page-ba">
-      <NavBar/>
-    
-    
-    <div className="profile-ba">
-      <div className="sidemenu-ba">
-        <div className="name-ba">HI CUSTOMER</div>
-        <div className="btn-ba">
-          <button className="bt-ba" onClick={(e)=>{handleSample()}}>BOOK AN APPOINTMENT</button>
-        </div>
-        <div className="list-ba">
-          <button className="bt-ba" onClick={()=>{handleProfile()}}>View Full Profile</button>
-          <button className="btselect-ba">Booked Appointments</button>
-          <button className="bt-ba" onClick={()=>{handleItems()}}>Available Items</button>
-          <button className="bt-ba"onClick={()=>{handleTransactions()}}>Transactions</button>
-        </div>
-      </div>
-      <div className="profiledisplay-ba">
-        <div className="section-ba">
-          <div className="title-ba">BOOKED APPOINTMENTS</div>
-          <div className="relation-ba">
-          <div className="rel1-ba">
-            <div className="name-ba">NAME</div>
-            <div className="rel-ba">RELATION</div>
-import NavBar from "../navbar.jsx";
-import { useNavigate } from "react-router-dom";
-
-const BookedAppointments = () => {
-  const navigate = useNavigate();
-  const handleProfile = () => {
-    navigate("/profile");
-  };
-  const handleItems = () => {
-    navigate("/items");
-  };
-  const handleTransactions = () => {
-    navigate("/transaction");
-  };
-  return (
-    <div className="page-ba">
       <NavBar />
 
       <div className="profile-ba">
         <div className="sidemenu-ba">
           <div className="name-ba">HI CUSTOMER</div>
           <div className="btn-ba">
-            <button className="bt-ba">BOOK AN APPOINTMENT</button>
+                <button className="bt-ba" onClick={(e)=>{handleSample()}}>BOOK AN APPOINTMENT</button>
           </div>
           <div className="list-ba">
             <button
@@ -150,4 +111,4 @@ const BookedAppointments = () => {
     </div>
   );
 };
-export default BookedAppointments;
+export default BookedAppointments; 
