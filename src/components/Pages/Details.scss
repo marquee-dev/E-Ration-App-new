@@ -14,10 +14,10 @@
             border-radius: 25px;
             background: #2D2A32;
             margin-left: 137px;
-            
+
 
             .name-d {
-                margin-left: 75px;
+                margin-left: 65px;
                 padding-top: 83px;
                 color: #FFF;
                 font-family: 'Open Sans', sans-serif;
@@ -109,51 +109,122 @@
         .profiledisplay-d {
             padding-left: 50px;
             display: flex;
-            flex-direction: row;
-
+            flex-direction: column;
             .title-d {
                 text-align: start;
                 font-family: Koulen;
                 font-size: 25px
             }
+            .card-d {
+                margin-top: 22px;
+                margin-left: 8px;
+                margin-bottom: 20px;
+                display: flex;
+                text-align: center;
 
-            .section-d {
-                .details-d {
+                .cardlabel-d {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 10px;
+                    color: #106A39;
                     font-family: Open Sans;
-
-                }
-
-                .custn-d {
-                    padding-top: 10px;
-                    text-align: start;
-                    color: #000;
-                    font-stretch: 50%;
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 12px;
+                    font-size: 15px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
+                }
 
-                    .custnbox-d {
-                        margin-top: 5px;
-                        width: 311px;
-                        height: 36px;
-                        flex-shrink: 0;
-                        border-radius: 10px;
-                        background: #D5F8A4;
+                .input-d {
+                    width: 273px;
+                    height: 43px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    text-indent: 10px;
+                    border: none;
+                    outline: none;
+                    background: #EEF0F2;
+                    margin-right: 30px;
+                }
+                .buttonview{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                .viewreport-d {
+                    
+                    font-family: 'Open Sans', sans-serif;
+                    color: #FFF;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    border: none;
+                    display: flex;
+                    width: 150px;
+                    height: 33px;
+                    padding: 16px 12px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    //border: 2px solid #61C43D;
+                    background: #61C43D;
+                    transition: background 0.3s;
+                    /* Add a smooth transition effect */
+
+                    &:hover {
+                        background: #4E9F2E;
+                        /* Change color on hover */
+                    }
+                    
+                }
+            }
+            }
+            
+
+            .sect-d {
+                display: flex;
+
+                .section-d {
+                    
+
+                    .details-d {
+                        font-family: Open Sans;
+
+                    }
+
+                    .custn-d {
+                        padding-top: 10px;
+                        text-align: start;
+                        color: #000;
+                        font-stretch: 50%;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+
+                        .custnbox-d {
+                            margin-top: 5px;
+                            width: 311px;
+                            height: 36px;
+                            flex-shrink: 0;
+                            border-radius: 10px;
+                            background: #D5F8A4;
+                        }
                     }
                 }
             }
 
             .relation-d {
-                margin-top: 50px;
+                margin-top: 10px;
                 margin-left: 50px;
                 display: flex;
                 flex-direction: column;
                 width: 470px;
-                height: 464px;
+                height: 400px;
                 flex-shrink: 0;
                 border-radius: 10px;
+                //background: #106A39;
                 background: rgb(252, 255, 247);
 
                 .rel1-d {
