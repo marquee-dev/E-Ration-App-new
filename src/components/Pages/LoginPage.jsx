@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./LoginPage.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -22,8 +23,26 @@ export default function LoginPage()
         }
         else
         {
+            const url = "http://localhost:4000/confirm";
+const data = {
+  username: username,
+  password: password
+};
+
+axios.post(url, data)
+  .then((res) => {
+    console.log(res.data);
+    if (res.data.success) {
+      navigate("/profile");
+    } else {
+      navigate("/create");
+    }
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
             
-            navigate("/profile")
         }
     }
     const handleCreate = () =>{
