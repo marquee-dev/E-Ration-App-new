@@ -8,9 +8,7 @@ const Stocks = () => {
   const handleDetails =() => {
     navigate("/details");
 }
-const handleTime = () =>{
-  navigate("/time");
-}
+
 const handleReport = () =>{
   navigate("/report");
 }
@@ -21,14 +19,14 @@ const handleReport = () =>{
     
     <div className="profile-s">
       <div className="sidemenu-s">
-        <div className="name-s">HI CUSTOMER</div>
+        <div className="name-s">HI SHOPKEEPER</div>
         <div className="btn-s">
           <button className="bt-s">VIEW APPOINTMENTS</button>
         </div>
         <div className="list-s">
           <button className="btselect-s">Remaining Stocks</button>
           <button className="bt-s" onClick={()=>{handleDetails()}}>View Customer Details</button>
-          <button className="bt-s"onClick={()=>{handleTime()}}>Set Shop Time</button>
+          
           <button className="bt-s"onClick={()=>{handleReport()}}>Sales Report</button>
         </div>
       </div>
