@@ -1,13 +1,13 @@
-.page-a {
+.page-ad {
     background-image: url(/assets/bg.jpg);
     background-size: cover;
 
-    .profile-a {
+    .profile-ad {
 
         display: flex;
         padding-top: 120px;
 
-        .sidemenu-a {
+        .sidemenu-ad {
             width: 344px;
             height: 547px;
             flex-shrink: 0;
@@ -16,7 +16,7 @@
             margin-left: 137px;
 
 
-            .name-a {
+            .name-ad {
                 margin-left: 75px;
                 padding-top: 83px;
                 color: #FFF;
@@ -27,11 +27,11 @@
                 line-height: normal;
             }
 
-            .btn-a {
+            .btn-ad {
                 margin-left: 65px;
                 padding-top: 25px;
 
-                .bt-a {
+                .bt-ad {
                     border: none;
                     text-align: center;
                     color: #FFF;
@@ -55,7 +55,7 @@
                 }
             }
 
-            .list-a {
+            .list-ad {
 
                 padding-top: 30px;
                 display: flex;
@@ -63,7 +63,7 @@
                 margin-left: 30px;
                 margin-right: 30px;
 
-                .bt-a {
+                .bt-ad {
 
                     padding-left: 42px;
                     text-align: start;
@@ -84,7 +84,7 @@
                     }
                 }
 
-                .btselect-a {
+                .btselect-ad {
                     text-align: start;
                     padding-left: 42px;
                     font-family: Open Sans;
@@ -106,22 +106,22 @@
 
         }
 
-        .profiledisplay-a {
+        .profiledisplay-ad {
             padding-left: 50px;
             display: flex;
             flex-direction: column;
 
-            .title-a {
+            .title-ad {
                 text-align: start;
                 font-family: Koulen;
                 font-size: 25px
             }
 
-            .details-a {
+            .details-ad {
                 display: flex;
                 flex-direction: column;
 
-                .relation-a {
+                .relation-ad {
                     margin-top: 20px;
                     //margin-left: 10px;
                     display: flex;
@@ -132,10 +132,10 @@
                     border-radius: 10px;
                     background: rgb(252, 255, 247);
 
-                    .rel1-a {
+                    .rel1-ad {
                         display: flex;
-                        //background-color: #106A39;
-                        .name-a {
+
+                        .name-ad {
                             padding-top: 15px;
                             padding-left: 30px;
                             padding-right: 30%;
@@ -147,7 +147,7 @@
                             font-weight: 400;
                             line-height: normal;
                         }
-                        .quant-a {
+                        .quant-ad {
                             padding-top: 15px;
                             padding-right: 35%;
                             color: #106A39;
@@ -158,7 +158,7 @@
                             line-height: normal;
                         }
 
-                        .price-a {
+                        .price-ad {
                             padding-top: 15px;
                             color: #106A39;
                             font-family: Open Sans;
@@ -169,11 +169,10 @@
                         }
                         
                     }
-                    .rel2-a {
-                        //background-color: #106A39;
+                    .rel2-ad {
                         padding-left: 13px;
                         padding-top: 1px;
-                        .line-a {
+                        .line-ad {
                             
                             width: 750px;
                             height: 1px;
@@ -186,11 +185,11 @@
 
             }
 
-            .sort-a {
+            .sort-ad {
                 display: flex;
                 justify-content: end;
 
-                .srt-a {
+                .srt-ad {
                     background-color: white;
                     width: 144px;
                     height: 43px;

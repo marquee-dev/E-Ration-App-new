@@ -8,6 +8,7 @@ import SplashScreen from './components/splashscreen';
 import AvailItems from './components/Pages/AvailItems';
 import BookedAppointments from "./components/Pages/BookedAppointments"
 import Transaction from "./components/Pages/Transaction"
+import AdminShop from "./components/Pages/AdminShop"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route element={<AvailItems/>} path='/items' /> 
       <Route element={<BookedAppointments/>} path='/booking' />
       <Route element={<Transaction/>} path='/transaction' />
+      <Route element={<AdminShop/>} path='/adminshop' />
      </Routes>
      </BrowserRouter>
     </div>
