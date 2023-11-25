@@ -9,6 +9,7 @@ import AvailItems from './components/Pages/AvailItems';
 import BookedAppointments from "./components/Pages/BookedAppointments"
 import Transaction from "./components/Pages/Transaction"
 import AdminShop from "./components/Pages/AdminShop"
+import Stocks from "./components/Pages/Stocks"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Route element={<BookedAppointments/>} path='/booking' />
       <Route element={<Transaction/>} path='/transaction' />
       <Route element={<AdminShop/>} path='/adminshop' />
+      <Route element={<Stocks/>} path='/stocks' />
      </Routes>
      </BrowserRouter>
     </div>
