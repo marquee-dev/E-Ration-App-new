@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./CreateAcct_2.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -36,8 +37,23 @@ export default function CreateAcct_2()
         }
         else
         {
-            navigate("/profile")
-
+            const url = "http://localhost:4000/login";
+      const data = {
+        username: username,
+        password: password,
+        cardno: cardno
+      };
+      const header = {};
+      axios
+        .post(url, data, header)
+        .then((res) => {
+          console.log(res);
+          navigate("/profile")
+                })
+        .catch((err) => {
+          console.log(err);
+        });
+            
         }
     }
     return(
