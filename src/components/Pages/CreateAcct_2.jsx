@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./CreateAcct_2.scss";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function CreateAcct_2()
 {
+    const navigate=useNavigate();
+    const location=useLocation();
+    const username=location.state.username;
+    const password=location.state.password;
     const [cardholdersname,setCardholdersname]=useState('');
     const [cardno,setCardno]=useState('');
     const [aadharno,setAadharno]=useState('')
@@ -31,7 +36,7 @@ export default function CreateAcct_2()
         }
         else
         {
-            window.location.href="/profile"
+            navigate("/profile")
 
         }
     }

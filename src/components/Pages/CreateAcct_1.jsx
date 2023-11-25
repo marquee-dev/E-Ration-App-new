@@ -27,7 +27,12 @@ export default function CreateAcct_1()
         }
         else
         {
-            navigate("/verify"); 
+            navigate("/verify",{
+                state:{
+                    username:username,
+                    password:password
+                }
+            }); 
 
         }
     }
