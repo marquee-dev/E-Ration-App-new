@@ -41,14 +41,23 @@ export default function CreateAcct_2()
       const data = {
         username: username,
         password: password,
-        cardno: cardno
+        cardno: cardno,
+        
       };
       const header = {};
       axios
         .post(url, data, header)
         .then((res) => {
           console.log(res);
-          navigate("/profile")
+          navigate("/profile",{
+            state:{
+                type:false,
+                cardno:cardno,
+                cardholdersname:cardholdersname,
+                aadharno:aadharno,
+                phonenumber:phonenumber
+            }
+          })
                 })
         .catch((err) => {
           console.log(err);

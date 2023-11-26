@@ -141,6 +141,12 @@
                         flex-shrink: 0;
                         border-radius: 10px;
                         background: #D5F8A4;
+                        display: flex;
+                        align-items: center;
+                        span{
+                            margin-left: 1vw;
+                            font-size: 1.05rem;
+                        }
                     }
                 }
             }

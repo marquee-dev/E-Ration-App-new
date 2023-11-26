@@ -33,7 +33,11 @@ axios.post(url, data)
   .then((res) => {
     console.log(res.data);
     if (res.data.success) {
-      navigate("/profile");
+      navigate("/profile",{
+        state:{
+          type:true //For knowing that we are going to the profile page from login page//
+        }
+      });
     } else {
       navigate("/create");
     }
