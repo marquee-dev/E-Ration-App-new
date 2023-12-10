@@ -15,7 +15,7 @@ const Details = () => {
     navigate("/report");
   };
   const handleDetails = () => {
-    axios.get("http://localhost:4000/data", {
+    axios.get("http://localhost:4000/viewdata", {
       params: {
         cardno:cardno
       }
@@ -63,7 +63,7 @@ const Details = () => {
           <div className="title-d">VIEW CUSTOMER DETAILS</div>
           <div className="card-d">
             <label className="cardlabel-d">CARD NO :</label>
-            <input type="text" className="input-d" val></input>
+            <input type="text" className="input-d" onChange={(e)=>{setCardno(e.target.value)}}></input>
             <div className="buttonview">
               <button className="viewreport-d" onClick={()=>{handleDetails()}}>VIEW REPORT</button>
             </div>
@@ -73,23 +73,41 @@ const Details = () => {
               <div className="details-d">
                 <div className="custn-d">
                   CARD NUMBER
-                  <div className="custnbox-d"></div>
+                  <div className="custnbox-d">
+                  {userData?.map(user => (
+    <span key={user.CardNo}>{user.CardNo}</span>
+  ))}
+                  </div>
                 </div>
                 <div className="custn-d">
                   CUSTOMER NAME
-                  <div className="custnbox-d"></div>
+                  <div className="custnbox-d">
+                  {userData?.map(user => (
+    <span key={user.Name}>{user.Name}</span>
+  ))}
+                  </div>
                 </div>
                 <div className="custn-d">
                   CARD TYPE
-                  <div className="custnbox-d"></div>
+                  <div className="custnbox-d">
+                  <span>APL</span>
+                  </div>
                 </div>
                 <div className="custn-d">
                   PHONE NUMBER
-                  <div className="custnbox-d"></div>
+                  <div className="custnbox-d">
+                  {userData?.map(user => (
+    <span key={user.PhoneNo}>{user.PhoneNo}</span>
+  ))}
+                  </div>
                 </div>
                 <div className="custn-d">
                   ADDRESS
-                  <div className="custnbox-d"></div>
+                  <div className="custnbox-d">
+                  {userData?.map(user => (
+    <span key={user.Address}>{user.Address}</span>
+  ))}
+                  </div>
                 </div>
               </div>
             </div>
