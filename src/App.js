@@ -14,6 +14,7 @@ import Details from "./components/Pages/Details"
 import Report from "./components/Pages/Report"
 import { useEffect, useState } from 'react';
 import Admshoplist from './components/Pages/Admshoplist';
+import AdminReport from './components/Pages/AdminReport';
 
 function App() {
   const [showSplash,setShowSplash]=useState(true);
@@ -41,6 +42,7 @@ function App() {
       <Route element={<Report/>} path='/report' />
       <Route element={<Details/>} path='/details'/>
       <Route element={<Admshoplist/>} path='/admin' />
+      <Route element={<AdminReport/>} path='/adminreport' />
      </Routes>
      </BrowserRouter>
     </div>
