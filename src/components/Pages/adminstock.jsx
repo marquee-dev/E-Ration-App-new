@@ -9,7 +9,7 @@ const AdminStock = () => {
     navigate("/admin");
   };
   const handleReport = () => {
-    navigate("/booking");
+    navigate("/adminreport");
   };
   return (
     <div className="page-ad">

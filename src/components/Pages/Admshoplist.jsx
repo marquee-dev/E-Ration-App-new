@@ -11,7 +11,7 @@ export default function Admshoplist() {
     navigate("/adminstock");
   }
   const handleReport=()=>{
-    navigate("/adminstock");
+    navigate("/adminreport");
   }
   useEffect(() => {
     axios.get("http://localhost:4000/viewshopkeeper")

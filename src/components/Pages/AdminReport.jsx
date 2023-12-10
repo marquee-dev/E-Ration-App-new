@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 const AdminReport = () => {
   const navigate = useNavigate();
   const handleShoplist = () => {
-    navigate("/adminstock");
-  };
-  const handleReport = () => {
     navigate("/admin");
+  };
+  const handleStock = () => {
+    navigate("/adminstock");
   };
   return (
     <div className="page-adr">
@@ -34,12 +34,12 @@ const AdminReport = () => {
             >
               View Shopkeeper List
             </button>
-            <button className="btselect-adr">Add Stock</button>
+            <button className="bt-adr"onClick={() => {
+                handleStock();
+              }}>Add Stock</button>
             <button
-              className="bt-adr"
-              onClick={() => {
-                handleReport();
-              }}
+              className="btselect-adr"
+              
             >
               Sales Report
             </button>
