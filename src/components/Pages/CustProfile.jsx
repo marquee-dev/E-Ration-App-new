@@ -141,6 +141,14 @@ const handleTransactions = () =>{
   ))}
               </div>
             </div>
+            <div className="custn">
+              PHONE NUMBER
+              <div className="custnbox">
+              {userData?.map(user => (
+    <span key={user.PhoneNo}>{user.PhoneNo}</span>
+  ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className="relation">

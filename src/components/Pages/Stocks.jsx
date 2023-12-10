@@ -58,3 +58,35 @@ const handleReport = () =>{
   );
 };
 export default Stocks;
+// .modal-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: rgba(0, 0, 0, 0.6); /* Adjust the opacity to control the blur effect */
+//   backdrop-filter: blur(5px); /* Adjust the blur amount */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 9999; /* Make sure the modal appears above other content */
+// }
+
+// /* Styles for the modal content */
+// .modal {
+//   background: rgba(23, 7, 32, 1);;
+//   padding: 20px;
+//   border-radius: 8px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+//   // max-width: 80%;
+//   // max-height: 80%;
+//   box-sizing: border-box;
+//   border: 1px solid white;
+//   width: 40vw;
+//   height: 45vh;
+//   overflow-y: auto;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   font-family: 'Sarabun',sans-serif;

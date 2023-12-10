@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Details.scss";
 import NavBar from "../navbar.jsx";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Details = () => {
   const navigate = useNavigate();
+  const [cardno,setCardno]=useState('');
+  const [userData, setUserData] = useState(null);
   const handleStocks = () => {
     navigate("/stocks");
   };
   const handleReport = () => {
     navigate("/report");
   };
+  const handleDetails = () => {
+    axios.get("http://localhost:4000/data", {
+      params: {
+        cardno:cardno
+      }
+    })
+    .then(function (response) {
+      console.log('Axios request successful');
+      setUserData(response.data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching data:', error);
+    });
+  }
 
   return (
     <div className="page-d">
@@ -46,9 +63,9 @@ const Details = () => {
           <div className="title-d">VIEW CUSTOMER DETAILS</div>
           <div className="card-d">
             <label className="cardlabel-d">CARD NO :</label>
-            <input type="text" className="input-d"></input>
+            <input type="text" className="input-d" val></input>
             <div className="buttonview">
-              <button className="viewreport-d">VIEW REPORT</button>
+              <button className="viewreport-d" onClick={()=>{handleDetails()}}>VIEW REPORT</button>
             </div>
           </div>
           <div className="sect-d">
@@ -67,11 +84,7 @@ const Details = () => {
                   <div className="custnbox-d"></div>
                 </div>
                 <div className="custn-d">
-                  PHONE NO
-                  <div className="custnbox-d"></div>
-                </div>
-                <div className="custn-d">
-                  TALUK
+                  PHONE NUMBER
                   <div className="custnbox-d"></div>
                 </div>
                 <div className="custn-d">
