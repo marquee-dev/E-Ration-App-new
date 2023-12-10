@@ -2,7 +2,7 @@ import React from "react";
 import "./AdminReport.scss";
 import NavBar from "../navbar.jsx";
 import { useNavigate } from "react-router-dom";
-
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 const AdminReport = () => {
   const navigate = useNavigate();
   const handleShoplist = () => {
@@ -46,11 +46,13 @@ const AdminReport = () => {
           </div>
         </div>
         <div className="profiledisplay-adr">
+            
           <div className="section-adr">
             <div className="title-adr">SALES REPORT</div>
           </div>
           <div className="btnclass">
-            <button className="btn-adr"><label></label>Download Sales Report</button>
+          
+            <button className="btn-adr"><label>{<CloudDownloadIcon/>}</label>Download Sales Report</button>
           </div>
           {/* <div className="details-adr">
            
