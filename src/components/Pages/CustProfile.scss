@@ -198,6 +198,25 @@
                         height: 1px;
                         background: #106A39;
                     }
+                    .contentp{
+                        margin-left: 20px;
+                        display: flex;
+                        padding-top: 10px   ;
+                        .namecon{
+                            height: 150px;
+                            //background: #106A39;
+                            justify-content: space-around;
+                            margin-right: 310px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .relcon{
+                            height: 150px;
+                            justify-content: space-around;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
                 }
             }
         }

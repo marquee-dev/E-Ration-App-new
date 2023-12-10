@@ -180,6 +180,33 @@
                             background: #106A39;
                         }
                     }
+                    .content-a{
+                        display: flex;
+                        margin-top: 10px;
+                        margin-left: 50px;
+                        
+                        .itemcon{
+                            height: 100px;
+                            justify-content: space-around;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .quantcon{
+                            margin-left: 240px;
+                            height: 100px;
+                            justify-content: space-around;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .pricecon{
+                            margin-left: 310px;
+                            height: 100px;
+                            justify-content: space-around;
+                            display: flex;
+                            flex-direction: column;
+
+                        }
+                    }
 
                     
                 }

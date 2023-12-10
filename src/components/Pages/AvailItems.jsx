@@ -91,12 +91,33 @@ const handleSample =async (e) =>{
         </div>
         <div className="relation-a">
           <div className="rel1-a">
-            <div className="name-a">ITEM NAME</div>
-            <div className="quant-a">QUANTITY</div>
-            <div className="price-a">PRICE/KG</div>
+            <div className="name-a"><header>ITEM NAME</header>
+            
+            </div>
+            <div className="quant-a"><header>QUANTITY</header>
+            <span></span>
+            </div>
+            <div className="price-a"><header>PRICE/KG</header></div>
           </div>
           <div className="rel2-a">
             <div className="line-a"></div>
+          </div>
+          <div className="content-a">
+            <div className="itemcon">
+              <span>RICE</span>
+            <span>KEROSENE</span>
+            <span>SUGAR</span>
+            </div>
+            <div className="quantcon">
+            <span>8 KG</span>
+            <span>1 LT</span>
+            <span>2 KG</span>
+            </div>
+            <div className="pricecon">
+            <span>₹15</span>
+            <span>₹18</span>
+            <span>₹12</span>
+            </div>
           </div>
         </div>
        
