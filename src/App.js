@@ -9,10 +9,12 @@ import AvailItems from './components/Pages/AvailItems';
 import BookedAppointments from "./components/Pages/BookedAppointments"
 import Transaction from "./components/Pages/Transaction"
 import AdminShop from "./components/Pages/AdminShop"
+import Admstock from "./components/Pages/adminstock"
 import Stocks from "./components/Pages/Stocks"
 import Details from "./components/Pages/Details"
 import Report from "./components/Pages/Report"
 import { useEffect, useState } from 'react';
+import Admshoplist from './components/Pages/Admshoplist';
 
 function App() {
   const [showSplash,setShowSplash]=useState(true);
@@ -39,6 +41,8 @@ function App() {
       <Route element={<Stocks/>} path='/stocks' />
       <Route element={<Report/>} path='/report' />
       <Route element={<Details/>} path='/details'/>
+      <Route element={<Admshoplist/>} path='/admin' />
+      <Route element={<Admstock/>} path='/adminstock' />
      </Routes>
      </BrowserRouter>
     </div>

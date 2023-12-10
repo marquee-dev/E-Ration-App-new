@@ -111,10 +111,12 @@
             display: flex;
             flex-direction: column;
 
-            .title-ad {
-                text-align: start;
-                font-family: Koulen;
-                font-size: 25px
+            .section-ad {
+                .title-ad {
+                    text-align: start;
+                    font-family: Koulen;
+                    font-size: 25px
+                }
             }
 
             .details-ad {
@@ -147,6 +149,7 @@
                             font-weight: 400;
                             line-height: normal;
                         }
+
                         .quant-ad {
                             padding-top: 15px;
                             padding-right: 35%;
@@ -167,20 +170,22 @@
                             font-weight: 400;
                             line-height: normal;
                         }
-                        
+
                     }
+
                     .rel2-ad {
                         padding-left: 13px;
                         padding-top: 1px;
+
                         .line-ad {
-                            
+
                             width: 750px;
                             height: 1px;
                             background: #106A39;
                         }
                     }
 
-                    
+
                 }
 
             }
