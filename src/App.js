@@ -36,14 +36,13 @@ function App() {
       <Route element={<AvailItems/>} path='/items' /> 
       <Route element={<BookedAppointments/>} path='/booking' />
       <Route element={<Transaction/>} path='/transaction' />
-<<<<<<< Updated upstream
+
       <Route element={<AdminShop/>} path='/adminshop' />
       <Route element={<Stocks/>} path='/stocks' />
       <Route element={<Report/>} path='/report' />
       <Route element={<Details/>} path='/details'/>
-=======
       <Route element={<Admshoplist/>} path='/admin' />
->>>>>>> Stashed changes
+
      </Routes>
      </BrowserRouter>
     </div>
