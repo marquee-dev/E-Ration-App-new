@@ -2,9 +2,9 @@ import React from "react";
 import "./AdminReport.scss";
 import NavBar from "../navbar.jsx";
 import { useNavigate } from "react-router-dom";
-<<<<<<< Updated upstream
+
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-=======
+
 
 
 const onButtonClick = () => {
@@ -16,7 +16,7 @@ const onButtonClick = () => {
   link.click();
   document.body.removeChild(link);
 }
->>>>>>> Stashed changes
+
 const AdminReport = () => {
   
   const navigate = useNavigate();
@@ -68,12 +68,8 @@ const AdminReport = () => {
             <div className="title-adr">SALES REPORT</div>
           </div>
           <div className="btnclass">
-<<<<<<< Updated upstream
-          
-            <button className="btn-adr"><label>{<CloudDownloadIcon/>}</label>Download Sales Report</button>
-=======
-            <button className="btn-adr"onClick={onButtonClick}><label></label>Download Sales Report</button>
->>>>>>> Stashed changes
+        
+            <button className="btn-adr"onClick={onButtonClick}><label>{<CloudDownloadIcon/>}</label>Download Sales Report</button>
           </div>
           {/* <div className="details-adr">
            
