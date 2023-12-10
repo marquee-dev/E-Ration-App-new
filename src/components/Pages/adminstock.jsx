@@ -21,13 +21,11 @@ const handleTransactions = () =>{
     
     <div className="profile-ad">
       <div className="sidemenu-ad">
-        <div className="name-ad">HI CUSTOMER</div>
-        <div className="btn-ad">
-          <button className="bt-ad">BOOK AN APPOINTMENT</button>
-        </div>
+        <div className="name-ad">    <label>ADMIN</label>
+          <label><br/>PROFILE</label></div>
         <div className="list-ad">
-          <button className="bt-ad"onClick={()=>{handleProfile()}}>View Full Profile</button>
-          <button className="bt-ad" onClick={()=>{handleBooking()}}>Booked Appointments</button>
+          <button className="bt-ad"onClick={()=>{handleProfile()}}>View Shopkeeper List</button>
+          <button className="bt-ad" onClick={()=>{handleBooking()}}>New User Verification</button>
           <button className="btselect-ad">Available Items</button>
           <button className="bt-ad"onClick={()=>{handleTransactions()}}>Transactions</button>
         </div>
