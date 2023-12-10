@@ -68,12 +68,8 @@ const AdminReport = () => {
             <div className="title-adr">SALES REPORT</div>
           </div>
           <div className="btnclass">
-
-          
+        
             <button className="btn-adr"onClick={onButtonClick}><label>{<CloudDownloadIcon/>}</label>Download Sales Report</button>
-
-            
-
           </div>
           {/* <div className="details-adr">
            

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Transaction.scss";
 import NavBar from '../navbar.jsx';
@@ -7,8 +7,23 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Transaction = () => {
   const location=useLocation();
   const username=location.state.username;
+  const [userData, setUserData] = useState(null);
   const Swal = require('sweetalert2')
   const navigate = useNavigate();
+  useEffect(() => {
+    axios.get("http://localhost:4000/customertransaction", {
+      params: {
+        username: username
+      }
+    })
+    .then(function (response) {
+      console.log('Axios request successful');
+      setUserData(response.data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching data:', error);
+    });
+  }, []);
   const handleProfile =() => {
     navigate("/profile",{
       state:{
@@ -98,20 +113,42 @@ const handleSample =async (e) =>{
             <div className="line-t"></div>
           </div>
         </div>
-       <div className="detailssub">
-        <div className="iddate">
-            <label className="id">ID</label>
-            <label className="date">DATE</label>
+        <div className="all">
+       <div className="first">
+
+        <div className="id">
+          <header>ID</header>
+          {userData?.map(user => (
+     <span key={user.TransID}>{user.TransID}</span>
+   ))}
         </div>
-        <div className="provol">
-        <label className="product">PRODUCT</label>
-            <label className="volume">VOLUME</label>
-        </div>
-        <div className="amt">
-        <label className="amount">AMOUNT</label>
+        <div className="date">
+        <header>DATE</header>
+        {userData?.map(user => (
+    <span key={user.TransactionDate}>{user.TransactionDate}</span>
+  ))}
         </div>
        </div>
-          
+          <div className="second">
+            <div className="rice"><header>RICE</header>{userData?.map(user => (
+    <span key={user.Rice}>{user.Rice}</span>
+  ))}</div>
+            <div className="kerosene"><header>KEROSENE</header>{userData?.map(user => (
+    <span key={user.Kerosene}>{user.Kerosene}</span>
+  ))}</div>
+            <div className="sugar"><header>SUGAR</header>{userData?.map(user => (
+    <span key={user.Sugar}>{user.Sugar}</span>
+  ))}</div>
+          </div>
+          <div className="third">
+            <div className="price">
+            <header>PRICE</header>
+            {userData?.map(user => (
+    <span key={user.TotalAmount}>{user.TotalAmount}</span>
+  ))}
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
