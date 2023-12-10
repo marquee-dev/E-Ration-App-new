@@ -8,6 +8,7 @@ const CustProfile = () => {
   const navigate = useNavigate();
   const location=useLocation();
   const [userData, setUserData] = useState(null);
+  const Swal = require('sweetalert2')
   const username=location.state.username;
   // useEffect(() => {
   //   axios.get('/fetch', {
@@ -80,7 +81,37 @@ const handleTransactions = () =>{
    
 // }
 
-  
+const handleSample =async (e) =>{
+  const { value: date } = await Swal.fire({
+    title: "SELECT YOUR DATE",
+    input: "date",
+    didOpen: () => {
+      const today = (new Date()).toISOString();
+      Swal.getInput().min = today.split("T")[0];
+      
+    }
+  });
+  if (date) {
+    const dete=date;
+    console.log(dete)
+    Swal.fire("BOOKING CONFIRMED", date);
+    
+    const url = "http://localhost:4000/book";
+    const data = {
+      username: username,
+      date:dete
+    };
+    
+    axios.post(url, data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    window.location.reload();
+  }
+}
   return (
     <div className="page">
       <NavBar/>
@@ -90,7 +121,7 @@ const handleTransactions = () =>{
       <div className="sidemenu">
         <div className="name">HI CUSTOMER</div>
         <div className="btn">
-          <button className="bt">BOOK AN APPOINTMENT</button>
+          <button className="bt" onClick={()=>{handleSample()}}>BOOK AN APPOINTMENT</button>
         </div>
         <div className="list">
           <button className="btselect">View Full Profile</button>

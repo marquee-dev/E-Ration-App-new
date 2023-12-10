@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import "./Transaction.scss";
 import NavBar from '../navbar.jsx';
 import { useLocation, useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Transaction = () => {
   const location=useLocation();
   const username=location.state.username;
+  const Swal = require('sweetalert2')
   const navigate = useNavigate();
   const handleProfile =() => {
     navigate("/profile",{
@@ -29,6 +31,38 @@ const handleItems = () =>{
       }
     })
 }
+const handleSample =async (e) =>{
+  const { value: date } = await Swal.fire({
+    title: "SELECT YOUR DATE",
+    input: "date",
+    didOpen: () => {
+      const today = (new Date()).toISOString();
+      Swal.getInput().min = today.split("T")[0];
+      
+    }
+  });
+  if (date) {
+    const dete=date;
+    console.log(dete)
+    Swal.fire("BOOKING CONFIRMED", date);
+    
+    const url = "http://localhost:4000/book";
+    const data = {
+      username: username,
+      date:dete
+    };
+    
+    axios.post(url, data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+  }
+  window.location.reload();
+}
   return (
     <div className="page-t">
       <NavBar/>
@@ -38,7 +72,7 @@ const handleItems = () =>{
       <div className="sidemenu-t">
         <div className="name-t">HI CUSTOMER</div>
         <div className="btn-t">
-          <button className="bt-t">BOOK AN APPOINTMENT</button>
+          <button className="bt-t"  onClick={()=>{handleSample()}}>BOOK AN APPOINTMENT</button>
         </div>
         <div className="list-t">
           <button className="bt-t"onClick={()=>{handleProfile()}}>View Full Profile</button>
