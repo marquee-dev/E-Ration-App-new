@@ -43,7 +43,6 @@ export default function CreateAcct_2()
         password: password,
         cardno: cardno,
         cardholdersname:cardholdersname,
-        phonenumber:phonenumber,
         address:address
       };
       const header = {};
@@ -54,7 +53,7 @@ export default function CreateAcct_2()
           navigate("/profile",{
             state:{
                 type:false,
-                
+                username:username,
             }
           })
                 })

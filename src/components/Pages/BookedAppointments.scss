@@ -160,6 +160,7 @@
                     flex-direction: column;
                     padding-left: 10px;
                     padding-right: 10px;
+                    padding-top: 10px;
                     .upcom {
                         padding-bottom: 170px;
                         
@@ -194,6 +195,25 @@
                             padding-bottom: 5px;
                             color: #106A39;
                         }
+                        .details-ba
+                        {
+                            display: flex;
+                            padding-left: 10px;
+                            justify-content: space-between;
+                            .id-details{
+                                span{
+                                    margin-right: 5px;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+                            .date-details{
+                                padding-right: 22px;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+
                     }
 
                     .comp {
