@@ -10,6 +10,7 @@ const AddTransaction = () => {
   const Swal = require('sweetalert2')
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
+  const [dete,setDete]=useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleDetails =() => {
     navigate("/details");
@@ -44,11 +45,11 @@ const handleSample =async (e) =>{
     }
   });
   if (date) {
-    const dete=date;
+    setDete(date);
     console.log(dete)
     Swal.fire("BOOKING CONFIRMED", date);
     
-    const url = "http://localhost:4000/book";
+    // const url = "http://localhost:4000/book";
     // const data = {
     //   username: username,
     //   date:dete
@@ -61,7 +62,7 @@ const handleSample =async (e) =>{
     //   .catch((error) => {
     //     console.error("Error:", error);
     //   });
-    window.location.reload();
+    // window.location.reload();
   }
 }
 const modalContent = (
@@ -140,7 +141,7 @@ const modalContent = (
             
             <div className="buttonview">
               <button className="viewreport-d"onClick={(e)=>{handleSample()}} >SELECT DATE</button>
-              <div className="displaydate"></div>
+              <div className="displaydate">{dete}</div>
             </div>
           </div>
           <div className="card-d">
