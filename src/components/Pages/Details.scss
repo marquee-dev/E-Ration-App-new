@@ -204,12 +204,18 @@
                         line-height: normal;
 
                         .custnbox-d {
+                            display: flex;
+                            align-items: center;
                             margin-top: 5px;
                             width: 311px;
                             height: 36px;
                             flex-shrink: 0;
                             border-radius: 10px;
                             background: #D5F8A4;
+                            span{
+                                margin-left: 1vw;
+                                font-size: 1.05rem;
+                            }
                         }
                     }
                 }
