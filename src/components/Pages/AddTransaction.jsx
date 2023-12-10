@@ -4,9 +4,10 @@ import NavBar from '../navbar.jsx';
 import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from '@mui/icons-material/Close';
-
+import axios from "axios";
 const AddTransaction = () => {
   const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleDetails =() => {
     navigate("/details");
@@ -16,6 +17,14 @@ const handleStocks = () =>{
   navigate("/stocks");
 }
 const openModal = () => {
+  axios.get("http://localhost:4000/viewappointments")
+  .then(function (response) {
+    console.log('Axios request successful');
+    setUserData(response.data);
+  })
+  .catch(function (error) {
+    console.error('Error fetching data:', error);
+  });
   setIsModalOpen(true);
 };
 
@@ -39,6 +48,24 @@ const modalContent = (
             <div className="rel2-s">
               <div className="line-s"></div>
             </div>
+            <div className="rel3-s">
+            <div className="id-s">
+            {userData?.map(user => (
+  <span key={user.idbooking}>{user.idbooking}</span>
+))}
+            </div>
+            <div className="username-s">
+            {userData?.map(user => (
+  <span key={user.username}>{user.username}</span>
+))}
+            </div>
+            <div className="date-s">
+            {userData?.map(user => (
+  <span key={user.date}>{user.date}</span>
+))}
+            </div>
+            </div>
+            
           </div>
   </div>
   

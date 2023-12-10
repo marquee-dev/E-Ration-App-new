@@ -314,6 +314,125 @@
 
     }
 }
+.modalcontent{
+    display: flex;
+    flex-direction: column;
+.appointment {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    //background-color: #106A39;
+    .heading {
+        font-family: Koulen;
+        font-size: 28px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .button {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        color: #61C43D;
+        transition: background 0.3s;
+        /* Add a smooth transition effect */
+
+        &:hover {
+            color: #4E9F2E;
+            /* Change color on hover */
+        }
+    }
+    
+}
+.relation-s {
+    //margin-top: 20px;
+    //margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgb(252, 255, 247);
+
+    .rel1-s {
+        display: flex;
+        justify-content: space-between;
+        //padding-top: 15px;
+        //background-color: #106A39;
+        .name-s {
+            padding-left: 30px;
+            
+            padding-bottom: 5px;
+            color: #106A39;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .quant-s {
+            
+            color: #106A39;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .price-s {
+           
+            color: #106A39;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+
+    }
+
+    .rel2-s {
+        //background-color: #106A39;
+        padding-left: 13px;
+        padding-top: 1px;
+
+        .line-s {
+
+            width: 980px;
+            height: 1px;
+            background: #106A39;
+        }
+    }
+    .id-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+    .username-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 95px;
+        
+    }
+    .date-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .rel3-s{
+        display:flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+}
+}
 .modal {
     background: rgb(255, 255, 255);;
     padding: 20px;

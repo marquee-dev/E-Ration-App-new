@@ -354,6 +354,7 @@
             font-weight: 400;
             line-height: normal;
         }
+        
 
     }
 
@@ -369,7 +370,28 @@
             background: #106A39;
         }
     }
-
+    .id-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+    .username-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 95px;
+        
+    }
+    .date-s{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .rel3-s{
+        display:flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
 
 }
 }
