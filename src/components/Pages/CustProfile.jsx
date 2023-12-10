@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./CustProfile.scss";
 import NavBar from "../navbar.jsx"
 import { useLocation, useNavigate } from "react-router-dom";
@@ -6,7 +7,52 @@ import { useLocation, useNavigate } from "react-router-dom";
 const CustProfile = () => {
   const navigate = useNavigate();
   const location=useLocation();
+  const [userData, setUserData] = useState(null);
   const username=location.state.username;
+  // useEffect(() => {
+  //   axios.get('/fetch', {
+  //     params: {
+  //       username: username
+  //     }
+  //   })
+  //   .then(function (response) {
+  //     // Assuming the response data is an array of user data
+  //     setUserData(response.data);
+  //   })
+  //   .catch(function (error) {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }, []);
+  // useEffect(() => {
+  //   console.log('Inside useEffect');
+  
+  //   axios.get('/fetch', {
+  //     params: {
+  //       username: username
+  //     }
+  //   })
+  //   .then(function (response) {
+  //     console.log('Axios request successful');
+  //     setUserData(response.data);
+  //   })
+  //   .catch(function (error) {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }, [/* dependencies */]);
+   useEffect(() => {
+    axios.get("http://localhost:4000/data", {
+      params: {
+        username: username
+      }
+    })
+    .then(function (response) {
+      console.log('Axios request successful');
+      setUserData(response.data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching data:', error);
+    });
+  }, []);
   const handleBooking = () =>{
     navigate("/booking",{
       state:{
@@ -29,6 +75,10 @@ const handleTransactions = () =>{
     }
   });
 }
+// const handleButton = () =>{
+//   console.log("hi00")
+   
+// }
 
   
   return (
@@ -56,30 +106,40 @@ const handleTransactions = () =>{
             <div className="custn">
               CARD NUMBER
               <div className="custnbox">
+                {/* {userData.map(user=>(
+                  <span>{user.Cardno}</span>
+                ))} */}
+                {userData?.map(user => (
+    <span key={user.Cardno}>{user.Cardno}</span>
+  ))}
                              {/* <span>{cardno}</span>    */}
+                             {/* <button onClick={()=>{handleButton()}}>HI</button> */}
               </div>
             </div>
             <div className="custn">
               CUSTOMER NAME
               <div className="custnbox">
               {/* <span>{cardholdersname}</span> */}
-
+              {userData?.map(user => (
+    <span key={user.Name}>{user.Name}</span>
+  ))}
               </div>
             </div>
             <div className="custn">
               CARD TYPE
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              PHONE NO
               <div className="custnbox">
-                {/* <span>{phonenumber}</span> */}
+                <span>APL</span>
               </div>
             </div>
             
+            
             <div className="custn">
               ADDRESS
-              <div className="custnbox"></div>
+              <div className="custnbox">
+              {userData?.map(user => (
+    <span key={user.Address}>{user.Address}</span>
+  ))}
+              </div>
             </div>
           </div>
         </div>

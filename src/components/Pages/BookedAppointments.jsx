@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BookedAppointments.scss";
-import NavBar from "../navbar.jsx"
+import NavBar from "../navbar.jsx";
+import axios from "axios";
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -8,7 +9,22 @@ const BookedAppointments = () => {
   const location=useLocation();
   const username=location.state.username;
     const navigate=useNavigate();
+    const [userData, setUserData] = useState(null);
     const Swal = require('sweetalert2')
+    useEffect(() => {
+      axios.get("http://localhost:4000/bookdata", {
+        params: {
+          username: username
+        }
+      })
+      .then(function (response) {
+        console.log('Axios request successful');
+        setUserData(response.data);
+      })
+      .catch(function (error) {
+        console.error('Error fetching data:', error);
+      });
+    }, []);
     const handleProfile =() => {
         navigate("/profile",{
           state:{
@@ -41,8 +57,24 @@ const BookedAppointments = () => {
         }
       });
       if (date) {
+        const dete=date;
+        console.log(dete)
         Swal.fire("BOOKING CONFIRMED", date);
         
+        const url = "http://localhost:4000/book";
+        const data = {
+          username: username,
+          date:dete
+        };
+        
+        axios.post(url, data)
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+        window.location.reload();
       }
     }
   return (
@@ -93,30 +125,29 @@ const BookedAppointments = () => {
                     <label className="upcoming">UPCOMING</label>
                   </div>
                   <div className="updetails">
-                  <label className="snou-ba">SNO</label>
+                  {/* <label className="snou-ba">SNO</label> */}
                   <label className="book-ba">BOOKING ID</label>
-                  <label className="datet-ba">DATE & TIME ALLOTED</label>
+                  <label className="datet-ba">DATE ALLOTED</label>
                   </div>
                   <div className="line">
                     
                   </div>
-                </div>
-                <div className="comp">
-                  <div className="com">
-                    <label className="completed">COMPLETED</label>
+                  <div className="details-ba">
+                    <div className="id-details">
+                    {userData?.map(user => (
+    <span key={user.idbooking}>{user.idbooking}</span>
+  ))}
+                    </div>
+                    <div className="date-details">
+                    {userData?.map(user => (
+    <span key={user.date}>{user.date}</span>
+  ))}
+                    </div>
                   </div>
-                  <div className="compdetails">
-                    <label className="sno">SNO</label>
-                    <label className="bill-ba">BILLID</label>
-                    <label className="date-ba">DATE OF PURCHASE & TIME</label>
-                    <label className="item-ba">ITEM & QUANTITY</label>
-                    <label className="total-ba">TOTAL PRICE</label>
-                  </div>
                 </div>
+                
               </div>
-              <div className="rel2-ba">
-                <div className="line-ba"></div>
-              </div>
+              
             </div>
             
           </div>
