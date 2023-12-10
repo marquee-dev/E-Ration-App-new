@@ -11,6 +11,11 @@ const AddTransaction = () => {
   const username=location.state.username;
   const Swal = require('sweetalert2')
   const navigate = useNavigate();
+  const [cardno,setCardno]=useState('');
+  const [rice,setRice]=useState('');
+  const [kerosene,setKerosene]=useState('');
+  const [sugar,setSugar]=useState('');
+  const [price,setPrice]=useState('');
   const [userData, setUserData] = useState(null);
   const [dete,setDete]=useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -75,6 +80,26 @@ const handleSample =async (e) =>{
     // window.location.reload();
   }
 }
+const handleSubmit = () =>{
+  const url = "http://localhost:4000/addtransaction";
+    const data = {
+      cardno: cardno,
+      date:dete,
+      price:price,
+      rice:rice,
+      kerosene:kerosene,
+      sugar:sugar
+    };
+    
+    axios.post(url, data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+      window.location.reload();
+}
 const modalContent = (
   <div className="modalcontent">
   <div className="appointment">
@@ -136,7 +161,7 @@ const modalContent = (
       <div className="title-r">ADD TRANSACTION</div>
       <div className="card-d">
             <label className="cardlabel-d">CARD NO :</label>
-            <input type="number" className="input-d"></input>
+            <input type="number" className="input-d" onChange={(e)=>{setCardno(e.target.value)}}></input>
             <div className="buttonview">
               <button className="viewreport-d">ENTER</button>
             </div>
@@ -156,30 +181,30 @@ const modalContent = (
           </div>
           <div className="card-d">
             <label className="cardlabel-d">RICE :</label>
-            <input type="number" className="input-d"></input>
+            <input type="number" className="input-d" onChange={(e)=>{setRice(e.target.value)}}></input>
             <label >IN KG</label>
             
           </div>
           <div className="card-d">
             <label className="cardlabel-d">KEROSENE :</label>
-            <input type="number" className="input-d"></input>
+            <input type="number" className="input-d" onChange={(e)=>{setKerosene(e.target.value)}}></input>
             <label >IN LITRE</label>
           </div>
           <div className="card-d">
             <label className="cardlabel-d">SUGAR :</label>
-            <input type="number" className="input-d"></input>
+            <input type="number" className="input-d" onChange={(e)=>{setSugar(e.target.value)}}></input>
             <label >IN KG</label>
             
           </div>
           <div className="card-d">
             <label className="cardlabel-d">TOTAL PRICE :</label>
-            <input type="number" className="input-d"></input>
+            <input type="number" className="input-d" onChange={(e)=>{setPrice(e.target.value)}}></input>
             <label >IN ₹</label>
           </div>
           <div className="card-d">
             
             <div className="buttonview">
-              <button className="viewreport-d">SUBMIT</button>
+              <button className="viewreport-d" onClick={()=>{handleSubmit()}}>SUBMIT</button>
             </div>
           </div>
         </div>
