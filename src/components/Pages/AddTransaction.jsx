@@ -126,7 +126,7 @@ const modalContent = (
       <div className="title-r">ADD TRANSACTION</div>
       <div className="card-d">
             <label className="cardlabel-d">CARD NO :</label>
-            <input type="text" className="input-d"></input>
+            <input type="number" className="input-d"></input>
             <div className="buttonview">
               <button className="viewreport-d">ENTER</button>
             </div>
@@ -146,23 +146,25 @@ const modalContent = (
           </div>
           <div className="card-d">
             <label className="cardlabel-d">RICE :</label>
-            <input type="text" className="input-d"></input>
+            <input type="number" className="input-d"></input>
+            <label >IN KG</label>
             
           </div>
           <div className="card-d">
             <label className="cardlabel-d">KEROSENE :</label>
-            <input type="text" className="input-d"></input>
-            
+            <input type="number" className="input-d"></input>
+            <label >IN LITRE</label>
           </div>
           <div className="card-d">
             <label className="cardlabel-d">SUGAR :</label>
-            <input type="text" className="input-d"></input>
+            <input type="number" className="input-d"></input>
+            <label >IN KG</label>
             
           </div>
           <div className="card-d">
             <label className="cardlabel-d">TOTAL PRICE :</label>
-            <input type="text" className="input-d"></input>
-            
+            <input type="number" className="input-d"></input>
+            <label >IN ₹</label>
           </div>
           <div className="card-d">
             
