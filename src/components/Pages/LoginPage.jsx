@@ -35,7 +35,8 @@ axios.post(url, data)
     if (res.data.success) {
       navigate("/profile",{
         state:{
-          type:true //For knowing that we are going to the profile page from login page//
+          type:true, //For knowing that we are going to the profile page from login page//
+          username:username
         }
       });
     } else {

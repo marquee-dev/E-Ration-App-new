@@ -13,7 +13,7 @@ export default function CreateAcct_2()
     const [cardno,setCardno]=useState('');
     const [aadharno,setAadharno]=useState('')
     const [phonenumber,setPhonenumber]=useState('')
-    const [otp,setOtp]=useState('');
+    const [address,setAddress]=useState('');
     const handleProfile = () =>{
         if(cardholdersname.length===0)
         {
@@ -31,7 +31,7 @@ export default function CreateAcct_2()
         {
             alert("Enter phone number")
         }
-        else if(otp.length===0)
+        else if(address.length===0)
         {
             alert("Enter otp")
         }
@@ -42,7 +42,9 @@ export default function CreateAcct_2()
         username: username,
         password: password,
         cardno: cardno,
-        
+        cardholdersname:cardholdersname,
+        phonenumber:phonenumber,
+        address:address
       };
       const header = {};
       axios
@@ -52,10 +54,7 @@ export default function CreateAcct_2()
           navigate("/profile",{
             state:{
                 type:false,
-                cardno:cardno,
-                cardholdersname:cardholdersname,
-                aadharno:aadharno,
-                phonenumber:phonenumber
+                
             }
           })
                 })
@@ -91,8 +90,8 @@ export default function CreateAcct_2()
                 <input type="text" placeholder="Enter Phone Number"  onChange={(e)=>{setPhonenumber(e.target.value)}}/>
                     </div>
                 <div className="error">
-                <label >One Time Password</label>
-                <input type="text" placeholder="Enter OTP"  onChange={(e)=>{setOtp(e.target.value)}}/>
+                <label >Address</label>
+                <input type="text" placeholder="Enter Address"  onChange={(e)=>{setAddress(e.target.value)}}/>
                 </div>
                 </div>
                 </div>

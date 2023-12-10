@@ -6,21 +6,31 @@ import { useLocation, useNavigate } from "react-router-dom";
 const CustProfile = () => {
   const navigate = useNavigate();
   const location=useLocation();
+  const username=location.state.username;
   const handleBooking = () =>{
-    navigate("/booking");
+    navigate("/booking",{
+      state:{
+        username:username
+      }
+    });
   }
   const handleItems = () =>{
-    navigate("/items")
+    navigate("/items",{
+      state:{
+        username:username
+      }
+    })
 } 
 
 const handleTransactions = () =>{
-  navigate("/transaction");
+  navigate("/transaction",{
+    state:{
+      username:username
+    }
+  });
 }
-if(location.state.type===false)
-{
-  const cardno=location.state.cardno;
-  const cardholdersname=location.state.cardholdersname;
-  const phonenumber=location.state.phonenumber;
+
+  
   return (
     <div className="page">
       <NavBar/>
@@ -46,13 +56,13 @@ if(location.state.type===false)
             <div className="custn">
               CARD NUMBER
               <div className="custnbox">
-                             <span>{cardno}</span>   
+                             {/* <span>{cardno}</span>    */}
               </div>
             </div>
             <div className="custn">
               CUSTOMER NAME
               <div className="custnbox">
-              <span>{cardholdersname}</span>
+              {/* <span>{cardholdersname}</span> */}
 
               </div>
             </div>
@@ -63,13 +73,10 @@ if(location.state.type===false)
             <div className="custn">
               PHONE NO
               <div className="custnbox">
-                <span>{phonenumber}</span>
+                {/* <span>{phonenumber}</span> */}
               </div>
             </div>
-            <div className="custn">
-              TALUK
-              <div className="custnbox"></div>
-            </div>
+            
             <div className="custn">
               ADDRESS
               <div className="custnbox"></div>
@@ -89,75 +96,6 @@ if(location.state.type===false)
     </div>
     </div>
   );
-};
-if(location.state.type===true)
-{
-  return (
-    <div className="page">
-      <NavBar/>
-    
-    
-    <div className="profile">
-      <div className="sidemenu">
-        <div className="name">HI CUSTOMER</div>
-        <div className="btn">
-          <button className="bt">BOOK AN APPOINTMENT</button>
-        </div>
-        <div className="list">
-          <button className="btselect">View Full Profile</button>
-          <button className="bt" onClick={()=>{handleBooking()}}>Booked Appointments</button>
-          <button className="bt" onClick={()=>{handleItems()}}>Available Items</button>
-          <button className="bt"onClick={()=>{handleTransactions()}}>Transactions</button>
-        </div>
-      </div>
-      <div className="profiledisplay">
-        <div className="section">
-          <div className="title">PROFILE</div>
-          <div className="details">
-            <div className="custn">
-              CARD NUMBER
-              <div className="custnbox">
-                hi
-              </div>
-            </div>
-            <div className="custn">
-              CUSTOMER NAME
-              <div className="custnbox">
 
-              </div>
-            </div>
-            <div className="custn">
-              CARD TYPE
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              PHONE NO
-              <div className="custnbox">
-              </div>
-            </div>
-            <div className="custn">
-              TALUK
-              <div className="custnbox"></div>
-            </div>
-            <div className="custn">
-              ADDRESS
-              <div className="custnbox"></div>
-            </div>
-          </div>
-        </div>
-        <div className="relation">
-          <div className="rel1">
-            <div className="name">NAME</div>
-            <div className="rel">RELATION</div>
-          </div>
-          <div className="rel2">
-            <div className="line"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  );
-};
 }
 export default CustProfile;

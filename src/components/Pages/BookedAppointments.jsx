@@ -2,19 +2,33 @@ import React from "react";
 import "./BookedAppointments.scss";
 import NavBar from "../navbar.jsx"
 import Swal from 'sweetalert2';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const BookedAppointments = () => {
+  const location=useLocation();
+  const username=location.state.username;
     const navigate=useNavigate();
     const Swal = require('sweetalert2')
     const handleProfile =() => {
-        navigate("/profile");
+        navigate("/profile",{
+          state:{
+            username:username
+          }
+        });
     }
     const handleItems = () =>{
-        navigate("/items")
+        navigate("/items",{
+          state:{
+            username:username
+          }
+        })
     }
     const handleTransactions = () =>{
-      navigate("/transaction");
+      navigate("/transaction",{
+        state:{
+          username:username
+        }
+      });
     }
     const handleSample =async (e) =>{
       const { value: date } = await Swal.fire({

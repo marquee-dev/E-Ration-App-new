@@ -1,18 +1,33 @@
 import React from "react";
 import "./Transaction.scss";
 import NavBar from '../navbar.jsx';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Transaction = () => {
+  const location=useLocation();
+  const username=location.state.username;
   const navigate = useNavigate();
   const handleProfile =() => {
-    navigate("/profile");
+    navigate("/profile",{
+      state:{
+        username:username
+      }
+    });
 }
 const handleBooking = () =>{
-  navigate("/booking");
+  navigate("/booking",{
+    state:{
+      username:username
+    }
+  });
 }
 const handleItems = () =>{
-    navigate("/items")
+    navigate("/items",
+    {
+      state:{
+        username:username
+      }
+    })
 }
   return (
     <div className="page-t">
