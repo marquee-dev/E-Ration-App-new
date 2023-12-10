@@ -11,7 +11,10 @@ export default function Admshoplist()
             <Navbar/>
             <div className="profile-adm">
       <div className="sidemenu-adm">
-        <div className="name-adm">ADMIN PROFILE</div>
+        <div className="name-adm">
+          <label>ADMIN</label>
+          <label><br/>PROFILE</label>
+        </div>
         <div className="list-adm">
           <button className="btselect-adm">View Shopkeeper List</button>
           <button className="bt-adm">New User Verification</button>
