@@ -2,8 +2,23 @@ import React from "react";
 import "./AdminReport.scss";
 import NavBar from "../navbar.jsx";
 import { useNavigate } from "react-router-dom";
+<<<<<<< Updated upstream
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+=======
+
+
+const onButtonClick = () => {
+  const pdfUrl = "Sample.pdf";
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "document.pdf"; // specify the filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+>>>>>>> Stashed changes
 const AdminReport = () => {
+  
   const navigate = useNavigate();
   const handleShoplist = () => {
     navigate("/admin");
@@ -11,6 +26,8 @@ const AdminReport = () => {
   const handleStock = () => {
     navigate("/adminstock");
   };
+  
+    
   return (
     <div className="page-adr">
       <NavBar />
@@ -51,8 +68,12 @@ const AdminReport = () => {
             <div className="title-adr">SALES REPORT</div>
           </div>
           <div className="btnclass">
+<<<<<<< Updated upstream
           
             <button className="btn-adr"><label>{<CloudDownloadIcon/>}</label>Download Sales Report</button>
+=======
+            <button className="btn-adr"onClick={onButtonClick}><label></label>Download Sales Report</button>
+>>>>>>> Stashed changes
           </div>
           {/* <div className="details-adr">
            
