@@ -50,7 +50,7 @@ const AdminReport = () => {
             <div className="title-adr">SALES REPORT</div>
           </div>
           <div className="btnclass">
-            <button className="btn-adr">Download Sales Report</button>
+            <button className="btn-adr"><label></label>Download Sales Report</button>
           </div>
           {/* <div className="details-adr">
            

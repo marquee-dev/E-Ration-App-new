@@ -132,6 +132,13 @@
           font-weight: 600;
           line-height: 100%; /* 16px */
           letter-spacing: 0.5px;
+          transition: background 0.3s;
+                        /* Add a smooth transition effect */
+
+                        &:hover {
+                            background: #4E9F2E;
+                            /* Change color on hover */
+                        } 
         }
       }
       .section-adr {

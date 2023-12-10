@@ -68,6 +68,11 @@ const AdminStock = () => {
             
           </div>
           <div className="card-d">
+            <label className="cardlabel-d">SHOPKEEPER ID :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
             
             <div className="buttonview">
               <button className="viewreport-d">SUBMIT</button>
