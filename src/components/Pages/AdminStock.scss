@@ -123,95 +123,76 @@
             .details-ad {
                 display: flex;
                 flex-direction: column;
-
+                justify-content: space-between;
                 .relation-ad {
-                    margin-top: 20px;
-                    //margin-left: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    width: 768px;
-                    height: 40px;
-                    flex-shrink: 0;
-                    border-radius: 10px;
-                    background: rgb(252, 255, 247);
 
-                    .rel1-ad {
+                    .card-d {
+                        justify-content: space-between;
+                        margin-top: 22px;
+                        margin-left: 8px;
+                        margin-bottom: 20px;
                         display: flex;
-
-                        .name-ad {
-                            padding-top: 15px;
-                            padding-left: 50px;
-                            padding-right: 73%;
-                            padding-bottom: 5px;
-                            color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                        }
-
-                        .quant-ad {
-                            padding-top: 15px;
-                            //padding-right: 35%;
-                            color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                        }
-
-                    }
-
-                    .rel2-ad {
-                        padding-left: 13px;
-                        padding-top: 1px;
-
-                        .line-ad {
-
-                            width: 750px;
-                            height: 1px;
-                            background: #106A39;
-                        }
-                    }
-
-                    .btnadd {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        padding-top: 20px;
-
-                        .add-ad {
-
+                        text-align: center;
+        
+                        .cardlabel-d {
                             display: flex;
-                            width: 103px;
-                            height: 38px;
-                            padding: 16px 12px;
-                            justify-content: center;
                             align-items: center;
-                            flex-shrink: 0;
-                            border-radius: 10px;
-                            border: 2px solid #61C43D;
-                            background: #61C43D;
-                            color: var(--default-white, #FFF);
+                            padding-right: 10px;
+                            color: #106A39;
                             font-family: Open Sans;
-                            font-size: 16px;
+                            font-size: 15px;
                             font-style: normal;
                             font-weight: 600;
-                            line-height: 100%;
-                            /* 16px */
-                            letter-spacing: 0.5px;
-                            transition: background 0.3s;
-                            /* Add a smooth transition effect */
-
-                            &:hover {
-                                background: #4E9F2E;
-                                /* Change color on hover */
+                            line-height: normal;
+                        }
+        
+                        .input-d {
+                            width: 273px;
+                            height: 43px;
+                            flex-shrink: 0;
+                            border-radius: 10px;
+                            text-indent: 10px;
+                            border: none;
+                            outline: none;
+                            background: #EEF0F2;
+                            margin-right: 30px;
+                        }
+        
+                        .buttonview {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+        
+                            .viewreport-d {
+        
+                                font-family: 'Open Sans', sans-serif;
+                                color: #FFF;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                border: none;
+                                display: flex;
+                                width: 150px;
+                                height: 33px;
+                                padding: 16px 12px;
+                                justify-content: center;
+                                align-items: center;
+                                flex-shrink: 0;
+                                border-radius: 10px;
+                                //border: 2px solid #61C43D;
+                                background: #61C43D;
+                                transition: background 0.3s;
+                                /* Add a smooth transition effect */
+        
+                                &:hover {
+                                    background: #4E9F2E;
+                                    /* Change color on hover */
+                                }
+        
                             }
                         }
                     }
-
                 }
 
             }

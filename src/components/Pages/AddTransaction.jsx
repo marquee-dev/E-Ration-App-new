@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from '@mui/icons-material/Close';
 import axios from "axios";
+import Swal from 'sweetalert2';
 const AddTransaction = () => {
+  const Swal = require('sweetalert2')
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,6 +33,37 @@ const openModal = () => {
 const closeModal = () => {
   setIsModalOpen(false);
 };
+const handleSample =async (e) =>{
+  const { value: date } = await Swal.fire({
+    title: "SELECT YOUR DATE",
+    input: "date",
+    didOpen: () => {
+      const today = (new Date()).toISOString();
+      Swal.getInput().min = today.split("T")[0];
+      
+    }
+  });
+  if (date) {
+    const dete=date;
+    console.log(dete)
+    Swal.fire("BOOKING CONFIRMED", date);
+    
+    const url = "http://localhost:4000/book";
+    // const data = {
+    //   username: username,
+    //   date:dete
+    // };
+    
+    // axios.post(url, data)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
+    window.location.reload();
+  }
+}
 const modalContent = (
   <div className="modalcontent">
   <div className="appointment">
@@ -103,19 +136,38 @@ const modalContent = (
         </div>
         <div className="details-r">
         <div className="relation-r">
-          <div className="rel1-r">
-            <div className="name-r">ITEMS</div>
-            <div className="quant-r">TOTAL QUANTITY</div>
-            <div className="price-r">TOTAL AMOUNT</div>
+        <div className="card-d">
+            
+            <div className="buttonview">
+              <button className="viewreport-d"onClick={(e)=>{handleSample()}} >SELECT DATE</button>
+              <div className="displaydate"></div>
+            </div>
           </div>
-          <div className="rel2-r">
-            <div className="line-r"></div>
+          <div className="card-d">
+            <label className="cardlabel-d">RICE :</label>
+            <input type="text" className="input-d"></input>
+            
           </div>
-          <div className="rel3-r">
-          <div className="line-r"></div>
-          <div className="total">
-            <button className="add-r">Add Transaction</button>
+          <div className="card-d">
+            <label className="cardlabel-d">KEROSENE :</label>
+            <input type="text" className="input-d"></input>
+            
           </div>
+          <div className="card-d">
+            <label className="cardlabel-d">SUGAR :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
+            <label className="cardlabel-d">TOTAL PRICE :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
+            
+            <div className="buttonview">
+              <button className="viewreport-d">SUBMIT</button>
+            </div>
           </div>
         </div>
        

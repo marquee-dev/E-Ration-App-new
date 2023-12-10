@@ -189,123 +189,83 @@
                 flex-direction: column;
 
                 .relation-r {
-                    //margin-top: 5px;
-                    //margin-left: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    width: 868px;
-                    height: 390px;
-                    flex-shrink: 0;
-                    border-radius: 10px;
-                    //background: #2D2A32;
-                    background: rgb(252, 255, 247);
-                    padding-left: 30px;
-
-                    .rel1-r {
-                        padding-top: 6px;
-
-                        display: flex;
-
-                        //background-color: #106A39;
-                        .name-r {
-                            padding-top: 15px;
-                            padding-left: 40px;
-                            padding-right: 28%;
-                            padding-bottom: 5px;
-                            color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                        }
-
-                        .quant-r {
-                            padding-top: 15px;
-                            padding-right: 28%;
-                            color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                        }
-
-                        .price-r {
-                            padding-top: 15px;
-                            color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                        }
-
+                    .displaydate{
+                        margin-left: 20px;
+                        width: 140px;
+                        height: 35px;
+                        border-radius: 10px;
+                        border: 0.5px solid rgb(212, 212, 212) ;
+                        background-color: rgb(252, 255, 247);
                     }
-
-                    .rel2-r {
-                        //background-color: #106A39;
-                        padding-left: 23px;
-                        padding-top: 5px;
-
-                        .line-r {
-
-                            width: 790px;
-                            height: 1px;
-                            background: #106A39;
-                        }
-                    }
-
-                    .rel3-r {
-                        padding-left: 23px;
-                        margin-top: 250px;
+                    .card-d {
+                        //background-color: #2D2A32;
+                        justify-content: space-between;
+                        margin-top: 22px;
+                        margin-left: 8px;
+                        margin-bottom: 20px;
                         display: flex;
-                        flex-direction: column;
-
-                        .line-r {
-
-                            width: 790px;
-                            height: 0.5px;
-                            background: #106A39;
-                        }
-
-                        .total {
-                            padding-top: 20px;
-                            padding-left: 580px;
+                        text-align: center;
+        
+                        .cardlabel-d {
                             display: flex;
-                            align-items: end;
-                            //justify-content: end;
-                            .add-r {
+                            align-items: center;
+                            padding-right: 10px;
+                            color: #106A39;
+                            font-family: Open Sans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+        
+                        .input-d {
+                            width: 273px;
+                            height: 43px;
+                            flex-shrink: 0;
+                            border-radius: 10px;
+                            text-indent: 10px;
+                            border: none;
+                            outline: none;
+                            background: #EEF0F2;
+                            margin-right: 30px;
+                        }
+        
+                        .buttonview {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+        
+                            .viewreport-d {
+        
+                                font-family: 'Open Sans', sans-serif;
+                                color: #FFF;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                border: none;
                                 display: flex;
-                                width: 193px;
+                                width: 150px;
                                 height: 33px;
-                                //padding: 16px 12px;
+                                padding: 16px 12px;
                                 justify-content: center;
                                 align-items: center;
                                 flex-shrink: 0;
                                 border-radius: 10px;
-                                border: 2px solid #61C43D;
+                                //border: 2px solid #61C43D;
                                 background: #61C43D;
-                                color: white;
-                                font-family: Open Sans;
-                                font-size: 14px;
-                                font-style: normal;
-                                font-weight: 600;
-                                line-height: 100%;
-                                /* 16px */
-                                letter-spacing: 0.5px;transition: background 0.3s;
+                                transition: background 0.3s;
                                 /* Add a smooth transition effect */
         
                                 &:hover {
                                     background: #4E9F2E;
                                     /* Change color on hover */
                                 }
-
+        
                             }
                         }
                     }
-
-
+             
                 }
 
             }

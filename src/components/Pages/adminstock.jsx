@@ -50,22 +50,29 @@ const AdminStock = () => {
             <div className="title-ad">ADD STOCK</div>
           </div>
           <div className="details-ad">
-            <div className="sort-ad">
-              <button className="srt-ad">
-                SORT: <span>A-Z</span>
-              </button>
-            </div>
+
             <div className="relation-ad">
-              <div className="rel1-ad">
-                <div className="name-ad">ITEM</div>
-                <div className="quant-ad">QUANTITY</div>
-              </div>
-              <div className="rel2-ad">
-                <div className="line-ad"></div>
-              </div>
-              <div className="btnadd">
-                <button className="add-ad">ADD</button>
-              </div>
+               <div className="card-d">
+            <label className="cardlabel-d">ITEM NAME :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
+            <label className="cardlabel-d">QUANTITY :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
+            <label className="cardlabel-d">PRICE/KG :</label>
+            <input type="text" className="input-d"></input>
+            
+          </div>
+          <div className="card-d">
+            
+            <div className="buttonview">
+              <button className="viewreport-d">SUBMIT</button>
+            </div>
+          </div>
             </div>
           </div>
         </div>
