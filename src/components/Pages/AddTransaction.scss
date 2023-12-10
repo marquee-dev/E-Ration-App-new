@@ -116,6 +116,7 @@
                 font-family: Koulen;
                 font-size: 25px
             }
+
             .card-d {
                 margin-top: 22px;
                 margin-left: 8px;
@@ -146,39 +147,41 @@
                     background: #EEF0F2;
                     margin-right: 30px;
                 }
-                .buttonview{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                .viewreport-d {
-                    
-                    font-family: 'Open Sans', sans-serif;
-                    color: #FFF;
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 600;
-                    border: none;
-                    display: flex;
-                    width: 150px;
-                    height: 33px;
-                    padding: 16px 12px;
-                    justify-content: center;
-                    align-items: center;
-                    flex-shrink: 0;
-                    border-radius: 10px;
-                    //border: 2px solid #61C43D;
-                    background: #61C43D;
-                    transition: background 0.3s;
-                    /* Add a smooth transition effect */
 
-                    &:hover {
-                        background: #4E9F2E;
-                        /* Change color on hover */
+                .buttonview {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .viewreport-d {
+
+                        font-family: 'Open Sans', sans-serif;
+                        color: #FFF;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        border: none;
+                        display: flex;
+                        width: 150px;
+                        height: 33px;
+                        padding: 16px 12px;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+                        border-radius: 10px;
+                        //border: 2px solid #61C43D;
+                        background: #61C43D;
+                        transition: background 0.3s;
+                        /* Add a smooth transition effect */
+
+                        &:hover {
+                            background: #4E9F2E;
+                            /* Change color on hover */
+                        }
+
                     }
-                    
                 }
-            }
             }
 
             .details-r {
@@ -197,10 +200,12 @@
                     //background: #2D2A32;
                     background: rgb(252, 255, 247);
                     padding-left: 30px;
+
                     .rel1-r {
                         padding-top: 6px;
-                        
+
                         display: flex;
+
                         //background-color: #106A39;
                         .name-r {
                             padding-top: 15px;
@@ -214,6 +219,7 @@
                             font-weight: 400;
                             line-height: normal;
                         }
+
                         .quant-r {
                             padding-top: 15px;
                             padding-right: 28%;
@@ -234,51 +240,72 @@
                             font-weight: 400;
                             line-height: normal;
                         }
-                        
+
                     }
+
                     .rel2-r {
                         //background-color: #106A39;
                         padding-left: 23px;
                         padding-top: 5px;
+
                         .line-r {
-                            
+
                             width: 790px;
                             height: 1px;
                             background: #106A39;
                         }
                     }
-                    .rel3-r{
+
+                    .rel3-r {
                         padding-left: 23px;
                         margin-top: 250px;
                         display: flex;
                         flex-direction: column;
+
                         .line-r {
-                            
+
                             width: 790px;
                             height: 0.5px;
                             background: #106A39;
                         }
-                        .total{
+
+                        .total {
+                            padding-top: 20px;
+                            padding-left: 580px;
                             display: flex;
-                        flex-direction: column;
-                        padding-left: 520px;
-                        padding-top: 20px;
-                        color: #106A39;
-                            font-family: Open Sans;
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: normal;
-                            .totalcust{
-                                
-                            }
-                            .totalamt{
-                                padding-top: 10px;
+                            align-items: end;
+                            //justify-content: end;
+                            .add-r {
+                                display: flex;
+                                width: 193px;
+                                height: 33px;
+                                //padding: 16px 12px;
+                                justify-content: center;
+                                align-items: center;
+                                flex-shrink: 0;
+                                border-radius: 10px;
+                                border: 2px solid #61C43D;
+                                background: #61C43D;
+                                color: white;
+                                font-family: Open Sans;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 100%;
+                                /* 16px */
+                                letter-spacing: 0.5px;transition: background 0.3s;
+                                /* Add a smooth transition effect */
+        
+                                &:hover {
+                                    background: #4E9F2E;
+                                    /* Change color on hover */
+                                }
+
                             }
                         }
                     }
 
-                    
+
                 }
 
             }
@@ -286,4 +313,48 @@
         }
 
     }
+}
+.modal {
+    background: rgb(255, 255, 255);;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    // max-width: 80%;
+    // max-height: 80%;
+    box-sizing: border-box;
+    border: 1px solid white;
+    width: 70vw;
+    height: 65vh;
+    overflow-y: auto;
+    //text-align: center;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //font-family: 'Sarabun',sans-serif;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the opacity to control the blur effect */
+    backdrop-filter: blur(5px); /* Adjust the blur amount */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure the modal appears above other content */
+  }
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
 }

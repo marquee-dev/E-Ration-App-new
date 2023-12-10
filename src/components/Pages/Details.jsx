@@ -3,6 +3,8 @@ import "./Details.scss";
 import NavBar from "../navbar.jsx";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Modal from "react-modal";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Details = () => {
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const Details = () => {
     navigate("/stocks");
   };
   const handleReport = () => {
-    navigate("/report");
+    navigate("/addtransaction");
   };
   const handleDetails = () => {
     axios.get("http://localhost:4000/viewdata", {
@@ -28,6 +30,36 @@ const Details = () => {
       console.error('Error fetching data:', error);
     });
   }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  const modalContent = (
+    <div className="modalcontent">
+    <div className="appointment">
+      <label className="heading">Appointments</label>
+      {/* Add any content you want to display in the modal */}
+      <label className="button" onClick={closeModal}>{<CloseIcon/>}</label>
+      
+    </div>
+    <div className="relation-s">
+              <div className="rel1-s">
+                <div className="name-s">BOOKING ID</div>
+                <div className="quant-s">USERNAME</div>
+                <div className="price-s">BOOKING DATE</div>
+              </div>
+              <div className="rel2-s">
+                <div className="line-s"></div>
+              </div>
+            </div>
+    </div>
+    
+  );
 
   return (
     <div className="page-d">
@@ -37,7 +69,7 @@ const Details = () => {
         <div className="sidemenu-d">
           <div className="name-d">HI SHOPKEEPER</div>
           <div className="btn-d">
-            <button className="bt-d">VIEW APPOINTMENTS</button>
+            <button className="bt-d"onClick={openModal}>VIEW APPOINTMENTS</button>
           </div>
           <div className="list-d">
             <button
@@ -55,7 +87,7 @@ const Details = () => {
                 handleReport();
               }}
             >
-              Sales Report
+              Add Transaction
             </button>
           </div>
         </div>
@@ -123,6 +155,16 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <Modal
+     isOpen={isModalOpen}
+     onRequestClose={closeModal}
+     contentLabel="Appointments Modal"
+    className="modal"
+    overlayClassName="modal-overlay"
+   >
+     {modalContent}
+     
+   </Modal>
     </div>
   );
 };

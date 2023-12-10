@@ -11,7 +11,7 @@ import Transaction from "./components/Pages/Transaction"
 import AdminStock from "./components/Pages/AdminStock"
 import Stocks from "./components/Pages/Stocks"
 import Details from "./components/Pages/Details"
-import Report from "./components/Pages/Report"
+import AddTransaction from "./components/Pages/AddTransaction"
 import { useEffect, useState } from 'react';
 import Admshoplist from './components/Pages/Admshoplist';
 import AdminReport from './components/Pages/AdminReport';
@@ -39,7 +39,7 @@ function App() {
       <Route element={<Transaction/>} path='/transaction' />
       <Route element={<AdminStock/>} path='/adminstock' />
       <Route element={<Stocks/>} path='/stocks' />
-      <Route element={<Report/>} path='/report' />
+      <Route element={<AddTransaction/>} path='/addtransaction' />
       <Route element={<Details/>} path='/details'/>
       <Route element={<Admshoplist/>} path='/admin' />
       <Route element={<AdminReport/>} path='/adminreport' />

@@ -23,7 +23,7 @@ const Stocks = () => {
   };
 
   const handleReport = () => {
-    navigate("/report");
+    navigate("/addtransaction");
   };
 
   const modalContent = (
@@ -66,7 +66,7 @@ const Stocks = () => {
               View Customer Details
             </button>
             <button className="bt-s" onClick={() => handleReport()}>
-              Sales Report
+            Add Transaction
             </button>
           </div>
         </div>
