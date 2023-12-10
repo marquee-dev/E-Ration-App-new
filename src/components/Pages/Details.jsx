@@ -2,19 +2,29 @@ import React, { useState } from "react";
 import "./Details.scss";
 import NavBar from "../navbar.jsx";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from '@mui/icons-material/Close';
 
 const Details = () => {
+  const location=useLocation();
+  const username=location.state.username;
   const navigate = useNavigate();
   const [cardno,setCardno]=useState('');
   const [userData, setUserData] = useState(null);
   const handleStocks = () => {
-    navigate("/stocks");
+    navigate("/stocks",{
+      state:{
+        username:username
+      }
+    });
   };
   const handleReport = () => {
-    navigate("/addtransaction");
+    navigate("/addtransaction",{
+      state:{
+        username:username
+      }
+    });
   };
   const handleDetails = () => {
     axios.get("http://localhost:4000/viewdata", {

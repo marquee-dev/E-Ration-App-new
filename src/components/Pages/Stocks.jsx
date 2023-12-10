@@ -1,15 +1,18 @@
 // Stocks.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Stocks.scss";
 import Modal from "react-modal";
 import axios from "axios";
 import NavBar from "../navbar.jsx";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CloseIcon from '@mui/icons-material/Close';
 
 const Stocks = () => {
+  const location=useLocation();
+  const username=location.state.username;
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
+  const [itemData, setItemData] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -29,13 +32,36 @@ const Stocks = () => {
   };
 
   const handleDetails = () => {
-    navigate("/details");
+    navigate("/details",{
+      state:{
+        username:username
+      }
+    });
   };
 
   const handleReport = () => {
-    navigate("/addtransaction");
+    navigate("/addtransaction",{
+      state:{
+        username:username
+      }
+    });
   };
-  
+  useEffect(() => {
+    console.log("sreerag")
+    axios.get("http://localhost:4000/viewitems", {
+      params: {
+        username: username
+      }
+    })
+    .then(function (response) {
+      console.log(username)
+      console.log('Axios request successful');
+      setItemData(response.data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching data:', error);
+    });
+  }, []);
   const modalContent = (
     <div className="modalcontent">
     <div className="appointment">
@@ -114,6 +140,23 @@ const Stocks = () => {
               </div>
               <div className="rel2-s">
                 <div className="line-s"></div>
+              </div>
+              <div className="rel3-s">
+              <div className="id-s">
+              {itemData?.map(item => (
+    <span key={item.name}>{item.name}</span>
+  ))}
+              </div>
+              <div className="username-s">
+              {itemData?.map(item => (
+    <span key={item.quantity}>{item.quantity}</span>
+  ))}
+              </div>
+              <div className="date-s">
+              {itemData?.map(item => (
+    <span key={item.price}>{item.price}</span>
+  ))}
+              </div>
               </div>
             </div>
           </div>

@@ -185,6 +185,40 @@
                             background: #106A39;
                         }
                     }
+                    .id-s{
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 30px;
+                        span{
+                            padding-top: 1vh;
+                            padding-bottom: 1vh;
+                        }
+                    }
+                    .username-s{
+                        display: flex;
+                        flex-direction: column;
+                        padding-right: 13%;  
+                        span{
+                        padding-top: 1vh;
+                            padding-bottom: 1vh;
+                        }                     
+                    }
+                    .date-s{
+                        display: flex;
+                        flex-direction: column;
+                        padding-right: 5%;
+                        span{
+                            padding-top: 1vh;
+                            padding-bottom: 1vh;
+                        }
+                    }
+                    .rel3-s{
+                        display:flex;
+                        justify-content: space-between;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    
+                    }
                    
                 }
 

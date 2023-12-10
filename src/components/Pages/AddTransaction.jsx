@@ -1,23 +1,33 @@
 import React, { useState } from "react";
 import "./AddTransaction.scss";
 import NavBar from '../navbar.jsx';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from '@mui/icons-material/Close';
 import axios from "axios";
 import Swal from 'sweetalert2';
 const AddTransaction = () => {
+  const location=useLocation();
+  const username=location.state.username;
   const Swal = require('sweetalert2')
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const [dete,setDete]=useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleDetails =() => {
-    navigate("/details");
+    navigate("/details",{
+      state:{
+        username:username
+      }
+    });
 }
 
 const handleStocks = () =>{
-  navigate("/stocks");
+  navigate("/stocks",{
+    state:{
+      username:username
+    }
+  });
 }
 const openModal = () => {
   axios.get("http://localhost:4000/viewappointments")
@@ -47,7 +57,7 @@ const handleSample =async (e) =>{
   if (date) {
     setDete(date);
     console.log(dete)
-    Swal.fire("BOOKING CONFIRMED", date);
+    Swal.fire("Date Selected", date);
     
     // const url = "http://localhost:4000/book";
     // const data = {
