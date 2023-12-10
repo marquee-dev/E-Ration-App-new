@@ -48,7 +48,7 @@ export default function CreateAcct_1()
                 <label className="username">Username</label>
                 <input type="text" onChange={(e)=>{setUsername(e.target.value)}} placeholder="Enter your username"/>
                 <label className="password">Password</label>
-                <input type="text" onChange={(e)=>{setPassword(e.target.value)}} placeholder="Enter your password"/>
+                <input type="password" onChange={(e)=>{setPassword(e.target.value)}} placeholder="Enter your password"/>
                 <label className="password">Confirm Password</label>
                 <input type="text"  onChange={(e)=>{setConfirmpassword(e.target.value)}} placeholder="Enter password again"/>
                 </div>

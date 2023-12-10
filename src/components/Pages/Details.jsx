@@ -182,11 +182,25 @@ const Details = () => {
             </div>
             <div className="relation-d">
               <div className="rel1-d">
-                <div className="name-d">NAME</div>
-                <div className="rel-d">RELATION</div>
+                <div className="name-d"><heading>NAME</heading></div>
+                <div className="rel-d"><heading>RELATION</heading></div>
               </div>
               <div className="rel2-d">
                 <div className="line-d"></div>
+              </div>
+              <div className="contentd">
+              <div className="namecond">
+                  <span>AAA</span>
+                  <span>BBB</span>
+                  <span>CCC</span>
+                  <span>DDD</span>
+                </div>
+                <div className="relcond">
+                  <span>FATHER</span>
+                  <span>MOTHER</span>
+                  <span>BROTHER</span>
+                  <span>SISTER</span>
+                </div>
               </div>
             </div>
           </div>

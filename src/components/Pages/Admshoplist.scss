@@ -190,6 +190,8 @@
                     
 
                     .shopno-adm{
+                        display: flex;
+                        flex-direction: column;
                         padding-top: 15px;
                           padding-left: 40px;
                           padding-right: 185px;
@@ -203,6 +205,8 @@
                           font-weight: 500;
                     }
                     .shopkeepername-adm{
+                        display: flex;
+                        flex-direction: column;
                         padding-left: 8%;
                         padding-top: 15px;
                           padding-right: 30%;
@@ -216,6 +220,8 @@
 
                     }
                     .place-adm{
+                        display: flex;
+                        flex-direction: column;
                         padding-top: 15px;
                         padding-left: 7%;
                           font-family: Open Sans;
