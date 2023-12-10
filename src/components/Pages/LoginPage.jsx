@@ -39,8 +39,36 @@ axios.post(url, data)
           username:username
         }
       });
-    } else {
-      navigate("/create");
+    } else 
+      {
+        const url = "http://localhost:4000/confirmshopkeeper";
+const data = {
+username: username,
+password: password
+};
+
+axios.post(url, data)
+.then((res) => {
+console.log(res.data);
+if (res.data.success) {
+  navigate("/stocks",{
+    state:{
+      type:true, //For knowing that we are going to the profile page from login page//
+      username:username
+    }
+  });
+} else {
+  
+  navigate("/create");
+}
+})
+.catch((error) => {
+console.error("Error:", error);
+});
+
+        
+    
+      // navigate("/create");
     }
   })
   .catch((error) => {

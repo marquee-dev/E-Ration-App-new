@@ -185,7 +185,49 @@
                           background: #106A39;
                       }
                   }
+                  .rel3-adm{
+                    display: flex;
+                    
 
+                    .shopno-adm{
+                        padding-top: 15px;
+                          padding-left: 40px;
+                          padding-right: 185px;
+                          padding-bottom: 5px;
+                          font-family: Open Sans;
+                          font-size: 15px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: normal;
+                          font-size: 1.2rem;
+                          font-weight: 500;
+                    }
+                    .shopkeepername-adm{
+                        padding-left: 8%;
+                        padding-top: 15px;
+                          padding-right: 30%;
+                          font-family: Open Sans;
+                          font-size: 15px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: normal;
+                          font-size: 1.2rem;
+                          font-weight: 500;
+
+                    }
+                    .place-adm{
+                        padding-top: 15px;
+                        padding-left: 7%;
+                          font-family: Open Sans;
+                          font-size: 15px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: normal;
+                          font-size: 1.2rem;
+                          font-weight: 500;
+
+                    }
+                  }
                   
               }
 

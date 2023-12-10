@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Admshoplist.scss";
+import axios from "axios";
 import Navbar from "../navbar.jsx";
 import { useNavigate } from "react-router-dom";
 
 export default function Admshoplist() {
   const navigate= useNavigate();
+  const [userData, setUserData] = useState(null);
   const handleStock=()=>{
     navigate("/adminstock");
   }
   const handleReport=()=>{
     navigate("/adminstock");
   }
+  useEffect(() => {
+    axios.get("http://localhost:4000/viewshopkeeper")
+    .then(function (response) {
+      console.log('Axios request successful');
+      setUserData(response.data);
+    })
+    .catch(function (error) {
+      console.error('Error fetching data:', error);
+    });
+  }, []);
   return (
     <div className="page-adm">
     <Navbar/>
@@ -48,6 +60,23 @@ export default function Admshoplist() {
         </div>
         <div className="rel2-adm">
           <div className="line-adm"></div>
+        </div>
+        <div className="rel3-adm">
+          <div className="shopno-adm">
+          {userData?.map(user => (
+    <span key={user.ShopkeeperID}>{user.ShopkeeperID}</span>
+  ))}
+          </div>
+          <div className="shopkeepername-adm">
+          {userData?.map(user => (
+    <span key={user.Name}>{user.Name}</span>
+  ))}
+          </div>
+          <div className="place-adm">
+          {userData?.map(user => (
+    <span key={user.Address}>{user.Address}</span>
+  ))}
+          </div>
         </div>
       </div>
      
