@@ -47,27 +47,17 @@ const AdminReport = () => {
         </div>
         <div className="profiledisplay-adr">
           <div className="section-adr">
-            <div className="title-adr">ADD STOCK</div>
+            <div className="title-adr">SALES REPORT</div>
           </div>
-          <div className="details-adr">
-            <div className="sort-adr">
-              <button className="srt-adr">
-                SORT: <span>A-Z</span>
-              </button>
-            </div>
+          <div className="btnclass">
+            <button className="btn-adr">Download Sales Report</button>
+          </div>
+          {/* <div className="details-adr">
+           
             <div className="relation-adr">
-              <div className="rel1-adr">
-                <div className="name-adr">ITEM</div>
-                <div className="quant-adr">QUANTITY</div>
-              </div>
-              <div className="rel2-adr">
-                <div className="line-adr"></div>
-              </div>
-              <div className="btnadrd">
-                <button className="add-adr">ADD</button>
-              </div>
+            
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
