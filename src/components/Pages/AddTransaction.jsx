@@ -83,6 +83,7 @@ const handleSample =async (e) =>{
 const handleSubmit = () =>{
   const url = "http://localhost:4000/addtransaction";
     const data = {
+      username:username,
       cardno: cardno,
       date:dete,
       price:price,
@@ -98,6 +99,7 @@ const handleSubmit = () =>{
       .catch((error) => {
         console.error("Error:", error);
       });
+      
       window.location.reload();
 }
 const modalContent = (
@@ -162,9 +164,7 @@ const modalContent = (
       <div className="card-d">
             <label className="cardlabel-d">CARD NO :</label>
             <input type="number" className="input-d" onChange={(e)=>{setCardno(e.target.value)}}></input>
-            <div className="buttonview">
-              <button className="viewreport-d">ENTER</button>
-            </div>
+           
           </div>
         <div className="section-r">
           
